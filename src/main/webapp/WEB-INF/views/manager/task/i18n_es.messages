@@ -1,0 +1,37 @@
+manager.task.list.label.title = Titulo
+manager.task.list.label.startDate = Fecha de comienzo
+manager.task.list.label.endDate = Fecha de fin
+manager.task.list.label.workload = Carga de trabajo (Horas)
+manager.task.list.label.description = Descripcion
+manager.task.list.label.optionalLink = Enlace opcional
+manager.task.list.label.executionPeriod = Periodo de ejecucion (Horas)
+manager.task.list.label.visibility = Visibilidad
+manager.task.form.label.visibility.PRIVATE = Privado
+manager.task.form.label.visibility.PUBLIC = Publico
+
+manager.task.form.label.title = Titulo
+manager.task.form.label.startDate = Fecha de comienzo
+manager.task.form.label.endDate = Fecha de fin
+manager.task.form.label.workload = Carga de trabajo (Horas)
+manager.task.form.label.description = Descripcion
+manager.task.form.label.optionalLink = Enlace opcional
+manager.task.form.label.visibility = Visibilidad
+manager.task.form.label.visibility.public = Pública
+manager.task.form.label.visibility.private = Privada
+manager.task.form.label.executionPeriod = Periodo de ejecucion (Horas)
+manager.task.form.button.create = Crear
+manager.task.form.button.return = Volver
+manager.task.form.button.update = Actualizar
+manager.task.form.button.delete = Borrar
+
+manager.task.form.label.finished = Terminado
+manager.task.form.label.finished.true = Terminada
+manager.task.form.label.finished.false = No terminada
+
+manager.task.form.title.error.spam= El titulo contiene spam
+manager.task.form.description.error.spam= La descripcion contiene spam
+manager.task.form.optionalLink.error.spam= El enlace opcional contiene spam
+manager.task.form.endDate.error= La fecha de fin no puede ser anterior a la de inicio
+manager.task.form.startDate.error= La fecha de inicio no puede estar en pasado
+manager.task.form.endDatePast.error= La fecha de fin no puede estar en pasado
+manager.task.form.workload.error= La carga de trabajo no puede ser mayor al periodo de ejecucion

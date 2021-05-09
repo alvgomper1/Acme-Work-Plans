@@ -1,0 +1,10 @@
+
+
+authenticated.manager.form.title.create = Become a manager
+authenticated.manager.form.title.update = Update your manager data
+ authenticated.manager.form.message.confirm = Confirm you want become manager
+ 
+
+authenticated.manager.form.button.create = Register
+authenticated.manager.form.button.update = Update
+authenticated.manager.form.button.return = Return

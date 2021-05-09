@@ -1,0 +1,20 @@
+anonymous.task.list.label.title = Titulo
+anonymous.task.list.label.startDate = Fecha de comienzo
+anonymous.task.list.label.endDate = Fecha de fin
+anonymous.task.list.label.workload = Carga de trabajo (Horas)
+anonymous.task.list.label.description = Descripcion
+anonymous.task.list.label.optionalLink = Enlace opcional
+anonymous.task.list.label.visibility = Visibilidad
+
+anonymous.task.form.label.title = Titulo
+anonymous.task.form.label.startDate = Fecha de comienzo
+anonymous.task.form.label.endDate = Fecha de fin
+anonymous.task.form.label.workload = Carga de trabajo (Horas)
+anonymous.task.form.label.description = Descripcion
+anonymous.task.form.label.optionalLink = Enlace opcional
+anonymous.task.form.label.visibility = Visibilidad
+anonymous.task.form.button.return = Volver
+anonymous.task.form.label.finished = Terminado
+anonymous.task.form.label.finished.false = No terminada
+anonymous.task.form.label.finished.true = Terminada
+anonymous.task.form.label.executionPeriod = Periodo de ejecucion (Horas)

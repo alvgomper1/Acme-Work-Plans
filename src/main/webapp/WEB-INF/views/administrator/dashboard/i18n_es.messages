@@ -1,0 +1,31 @@
+# i18n_es.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.show = Panel de indicadores
+
+administrator.dashboard.form.title.general-indicators = Indicadores generales
+administrator.dashboard.form.label.total-number-of-public-tasks = Número total de tasks públicas
+administrator.dashboard.form.label.total-number-of-private-tasks = Número total de tasks privadas
+administrator.dashboard.form.label.total-number-of-finished-tasks = Número total de tasks terminadas
+administrator.dashboard.form.label.total-number-of-non-finished-tasks = Número total de tasks no terminadas
+
+administrator.dashboard.form.title.execution-period = Periodo de ejecución
+administrator.dashboard.form.label.average-task-execution-period = Media de los periodos de ejecución
+administrator.dashboard.form.label.deviation-task-execution-period = Desviación de los periodos de ejecución
+administrator.dashboard.form.label.maximum-task-execution-period = Máximo periodo de ejecución
+administrator.dashboard.form.label.minimum-task-execution-period = Mínimo periodo de ejecución
+
+administrator.dashboard.form.title.task-workload = Carga de trabajo
+administrator.dashboard.form.label.average-task-workload = Media de las cargas de trabajo
+administrator.dashboard.form.label.deviation-task-workload = Desviación de las cargas de trabajo
+administrator.dashboard.form.label.maximum-task-workload = Máximo carga de trabajo
+administrator.dashboard.form.label.minimum-task-workload = Mínima carga de trabajo
+
+administrator.dashboard.form.title.application-statuses = Estado de las solicitudes

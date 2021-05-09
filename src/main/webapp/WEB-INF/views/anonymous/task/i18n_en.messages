@@ -1,0 +1,21 @@
+anonymous.task.list.label.title = Title
+anonymous.task.list.label.startDate = Start date time
+anonymous.task.list.label.endDate = End Date time
+anonymous.task.list.label.workload = Workload
+anonymous.task.list.label.description = Description
+anonymous.task.list.label.optionalLink = Optional link
+anonymous.task.list.label.visibility = Visibility
+
+anonymous.task.form.label.title = Title
+anonymous.task.form.label.startDate = Start date time
+
+anonymous.task.form.label.endDate = End date time
+anonymous.task.form.label.workload = Workload (hours)
+anonymous.task.form.label.description = Description
+anonymous.task.form.label.optionalLink = Optional link
+anonymous.task.form.label.visibility = Visibility
+anonymous.task.form.button.return = Return
+anonymous.task.form.label.finished = Finished
+anonymous.task.form.label.finished.false = Not finished
+anonymous.task.form.label.finished.true = Finished
+anonymous.task.form.label.executionPeriod = Execution Period (Hours)

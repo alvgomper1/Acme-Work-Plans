@@ -1,0 +1,10 @@
+
+
+authenticated.manager.form.title.create = Hazte gerente
+authenticated.manager.form.title.update = Actualiza tus datos de gerente
+
+ authenticated.manager.form.message.confirm = Confirma que quieres convertirte en gerente
+
+authenticated.manager.form.button.create = Registrar
+authenticated.manager.form.button.update = Actualizar
+authenticated.manager.form.button.return = Volver

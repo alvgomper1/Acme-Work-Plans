@@ -1,0 +1,18 @@
+authenticated.task.list.label.title = Titulo
+authenticated.task.list.label.startDate = Fecha de comienzo
+authenticated.task.list.label.endDate = Fecha de fin
+authenticated.task.list.label.workload = Carga de trabajo
+authenticated.task.list.label.description = Descripcion
+authenticated.task.list.label.optionalLink = Enlace opcional
+authenticated.task.list.label.visibility = Visibilidad
+
+authenticated.task.form.label.title = Titulo
+authenticated.task.form.label.startDate = Fecha de comienzo
+authenticated.task.form.label.endDate = Fecha de fin
+authenticated.task.form.label.workload = Carga de trabajo
+authenticated.task.form.label.description = Descripcion
+authenticated.task.form.label.optionalLink = Enlace opcional
+authenticated.task.form.label.visibility = Visibilidad
+authenticated.task.form.label.executionPeriod = Periodo de ejecucion
+authenticated.task.form.label.finished = Finalizada
+authenticated.task.form.button.return = Volver 
