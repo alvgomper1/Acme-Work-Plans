@@ -12,6 +12,7 @@
 
 package acme.entities.spam;
 
+import javax.annotation.Nonnull;
 import javax.persistence.Entity;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Max;
@@ -31,9 +32,11 @@ public class Spam extends DomainEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------	
+	@Nonnull
 	@Digits(integer=3,fraction=2)
 	@Min(0)
 	@Max(100)
+	
 	protected Double			threshold;
 
 	// Derived attributes -----------------------------------------------------
