@@ -12,9 +12,14 @@
 
 package acme.features.authenticated.manager;
 
+import java.util.Collection;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import com.google.common.base.Optional;
+
+import acme.entities.roles.Manager;
 import acme.framework.entities.UserAccount;
 import acme.framework.repositories.AbstractRepository;
 
@@ -23,6 +28,12 @@ public interface AuthenticatedManagerRepository extends AbstractRepository {
 
 	@Query("select ua from UserAccount ua where ua.id = ?1")
 	UserAccount findOneUserAccountById(int id);
+	
+	@Query("select t from Manager t where t.id = ?1")
+	Optional<Manager> findOneManagerFromId(int id);
+	
+	@Query("select t from Manager t")
+	Collection<Manager> findAllManagers();
 
 
 }

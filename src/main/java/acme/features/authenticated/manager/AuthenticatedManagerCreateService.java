@@ -13,6 +13,9 @@
 
 package acme.features.authenticated.manager;
 
+import java.util.Collection;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,11 +42,19 @@ public class AuthenticatedManagerCreateService implements AbstractCreateService<
 	// AbstractCreateService<Authenticated, Manager> ---------------------------
 
 
+	 
 	@Override
 	public boolean authorise(final Request<Manager> request) {
 		assert request != null;
-
-		return true;
+	final Collection<Integer> res = this.repository.findAllManagers().stream().map(x->x.getUserAccount().getId()).collect(Collectors.toList());
+		if (res.contains(request.getPrincipal().getAccountId())) {
+			return false;
+		}
+		
+		else {
+				return true;
+		}
+	
 	}
 
 	@Override
