@@ -20,7 +20,14 @@ public class AnonymousShoutListTest extends AbstractTest {
 		super.beforeAll();
 
 		super.setBaseCamp("http", "localhost", "8090", "/Acme-Planner", "/master/welcome", "?language=en&debug=true");
-		super.setAutoPausing(true);
+		super.setAutoPausing(false);
+		this.signIn("administrator", "administrator");
+		super.click(By.linkText("Administrator"));
+		super.submit(By.linkText("Populate DB (initial)"));
+		this.navigateHome();
+		super.click(By.linkText("Administrator"));
+		super.submit(By.linkText("Populate DB (samples)"));
+		this.signOut();
 
 	}
 
@@ -64,6 +71,38 @@ public class AnonymousShoutListTest extends AbstractTest {
 			}
 		}
 
+	}
+
+	/**
+	 * La feature que prueba este test es la de listar shouts como anonymous, pero el caso negativo, que seria intentando acceder al listado con un usuario logueado con
+	 * el rol de Administrador
+	 * <p>
+	 * Una vez loguado como administrator, lo primero es comprobar que no existe la seccion de anonymous. Despues intentamos acceder mediante url
+	 * al listado de shouts", y comprobamos que el resultado es una pagina de error, ya que no está autorizado.
+	 */
+
+	@Test
+	public void litadoDeShoutsAnonymousNegativo() {
+
+		this.signIn("administrator", "administrator");
+		assert !super.exists(By.linkText("Anonymous"));
+		super.driver.get("http://localhost:8090/Acme-Planner/anonymous/shout/list");
+		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
+		this.signOut();
+
+	}
+
+	protected void signIn(final String username, final String password) {
+		super.navigateHome();
+		super.click(By.linkText("Sign in"));
+		super.fill(By.id("username"), username);
+		super.fill(By.id("password"), password);
+		super.click(By.id("remember$proxy"));
+		super.submit(By.className("btn-primary"));
+	}
+	protected void signOut() {
+		super.navigateHome();
+		super.submit(By.linkText("Sign out"));
 	}
 
 }
