@@ -30,8 +30,6 @@ CAMBIO DE NIVEL A HACIA EL B
 Url del proyecto en CleverCloud: http://app-812a79d4-b2d0-42d1-a1a9-069917a7af35.cleverapps.io/Acme-Planner 
 PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
 
-Credenciales para CleverCloud: correo electrónico -> toledo.utrera@hotmail.com
-                               contraseña -> Acm#3plann3R
 
 Usuarios para navegar por la página:
 
