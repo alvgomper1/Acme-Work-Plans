@@ -1,0 +1,7 @@
+recordIndex,description,end_date,execution_period,finished,optional_link,start_date,title,visibility,workload,manager_id
+0,This is the oldest announcement in the system.,2021-02-21 23:00:00,1176,0,http://www.sample-app.com,2020-12-31 23:00:00,Example task 9,1,10.0,8
+1,This is the oldest announcement in the system.,2021-04-11 22:00:00,192,0,http://www.sample-app.com,2021-04-03 22:00:00,Example task 10,1,15.0,8
+2,This is the oldest announcement in the system.,2021-04-11 22:00:00,96,0,http://www.sample-app.com,2021-04-07 22:00:00,Example task 11,1,15.0,8
+3,This is the oldest announcement in the system.,2020-10-24 22:00:00,120,0,http://www.sample-app.com,2020-10-19 22:00:00,Example task 13,1,19.0,8
+4,This is the oldest announcement in the system.,2021-03-10 23:00:00,240,0,http://www.sample-app.com,2021-02-28 23:00:00,Example task 14,1,19.0,8
+5,This is the oldest announcement in the system.,2021-03-10 23:00:00,240,0,http://www.sample-app.com,2021-02-28 23:00:00,Example task 15,1,19.0,8
