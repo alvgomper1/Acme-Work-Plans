@@ -1,76 +1,40 @@
-README.txt
-==========
-
-This file documents how to upgrade a D&T project from version 21.3 to version 21.4.  In most cases, the upgrade must work automatically.  Follow the following instructions and everything should work well.  There's an additional video tutorial available at:
-
-	https://eu-lti.bbcollab.com/recording/94f72bbb86464c58b347a8ce42b4d125
-
-Upgrading your projects
------------------------
-
-Using the upgrade procedure is very simple.  You've got a zip file called "upgrade-21.3-21.4.zip".  Decompress it to a folder and make your command shell for that folder. Now, copy project "Starter-Project" into that folder.  Then execute the following command:
-
-	.\upgrade-21.3-21.4.cmd Starter-Project
-
-It returns the following text:
-
-	This utility allows to upgrade a project from version 21.3 to version 21.4.
-	It's safe to use it as long as you haven't changed the framework.
-	Project "Starter-Project" will be backed up as "Starter-Project;20210511152001" if you proceed.
-
-	Type 'y' to confirm or 'n' to abort the upgrade Y
-
-This informs you that the utility is intended to upgrade your projects, which is safe as long as you didn't make any changes to the framework.  It also informs you that it's going to back your project folder up and asks for confirmation.  Press the 'y' key and let's go ahead.  It will display the following text:
-
-	Backing up your project.
-
-	316 File(s) copied
-
-	Las opportunity to cancel. Type 'y' to proceed or 'n' to abort Y
-
-This informs you that it's copied your project and gives you the last opportunity to cancel the process.  Press 'y' to go ahead.  The script will display the following text if there are not any errors:
-
-	Upgrading your project.
-
-	Patching file "Starter-Project\pom.xml"
-	Patching file "Starter-Project\clevercloud\war.json"
-	Patching file "Starter-Project\CHANGELOG.txt"
-	Patching file Starter-Project\src\main\properties\banner.txt
-	Copying a few files...
-	.\patches\StringHelper.java
-	1 File(s) copied
-	.\patches\framework-testing\AbstractTest.java
-	.\patches\framework-testing\WaitConditions.java
-	2 File(s) copied
-	.\patches\sample-testing\AcmeTest.java
-	.\patches\sample-testing\SignUpTest.java
-	2 File(s) copied
-
-	Upgrading finished.  If there were any errors, please consult
-	the README.txt file and perform a manual upgrade.
-
-The output informs you of the files that are being patched or copied.  If no errors are displayed, then everything has worked well and you can keep working normally; otherwise, you should recover your project from the backup copy and upgrade it manually.  Please, consult the troubleshooting section for additional details.
-
-To upgrade project "Acme-Jobs" execute the following command: 
-
-	.\upgrade-21.3-21.4.cmd Acme-Jobs
-
-The output should be very similar to the previous one and there shouldn't be any problems. 
-
-It's time to upgrade your "Acme-Planner" project using the following command:
-
-	.\upgrade-21.3-21.4.cmd Acme-Planner
+# README.txt
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
 
 
-Troubleshooting
----------------
+Este es el proyecto Acme-Planner, correspondiente a los alumnos del grupo 30 de DP2 de 
+Ingeniería Informática del Software de la Universidad de Sevilla. Para este proyecto había 
+que trabajar con un framework especial proporcionado por los profesores de la asignatura.
 
-If the automatic upgrade fails, then there's really little you can do to get it working.  Very likely, you've changed something in the framework and the upgrade can't work automatically.   In that case, you'll have to upgrade your project manually.  The changes to this version are described next, where "<project>" denotes the folder where the project to upgrade resides.
+GitHub Repository: https://github.com/felconmar/Acme-Planner.git
+GitHub Release: https://github.com/felconmar/Acme-Planner/releases/tag/1.0.1
 
-- Update file "<project>\pom.xml" by changing the "<version>" element.
-- Update file "<project>\clevercloud\war.json" by changing the version of the war file.
-- Update file "<project>\CHANGELOG.txt" by adding the following line: "21.4   The testing framework has been greatly simplified and enhanced."
-- Update file "<project>\src\main\properties\banner.txt" by changing the version number.
-- Copy file ".\patches\StringHelper.java" to folder "<project>\src\main\java\acme\framework\helpers"
-- Copy the files in folder ".\patches\framework-testing" to folder "<project>\src\main\java\acme\framework\testing"
-- Copy the files in folder ".\patches\sample-testing" to folder "<project>\src\test\java\acme\testing"
+
+INTERPRETACIÓN DEL MÓDULO DE SPAM (Importante leerlo)
+-Consideraremos que una cadena contiene spam cuando el porcentaje de palabras de spam con respecto al total de ese texto (número de palabras spam / total de palabras) supere
+el umbral establecido. Por ejemplo, el texto "viagra mesa azul" tiene un porcentaje de spam del 33.33%. Si el umbral fuera de 10%, lo detectaría como spam.
+- Hemos implementado el spam de tal forma que pueda detectar palabras con espacios incluidos, por ejemplo, la palabra "million dollar" cuenta como una única palabra de spam
+cuando se encuentra escrita en ese orden, sin embargo, por ejemplo "million lights dollar", no se considera spam. Las palabras compuestas registradas como spam cuentan como una única palabra, por ejemplo "million dollar mesa", tendría un porcentaje de spam del 50%, porque "million dollar" se considera una única palabra, puesto que solo provoca spam cuando va en ese orden.
+- Para que funcione el módulo de spam, es necesario hacer un populate initial, para cargar el módulo. De otra forma al acceder al módulo de spam, pues dará error, porque no lo podrá encontrar en la base de datos. Para cargar las palabras de spam, hacer un populate-sample.
+
+CAMBIO DE NIVEL A HACIA EL B
+- A mediados del Sprint decidimos presentarnos al nivel B en lugar del A. EL presupuesto y el workplan han sido adaptados a este cambio, sin embargo, en gitGub hemos decidido dejar sin eliminar las ramas correspondientes a las funcionalidades del A, para que se pueda realizar un mejor seguimiento de todo lo que ha ocurrido en el proyecto. (La rama master no incorpora las funcionalidades A).
+
+Url del proyecto en CleverCloud: http://app-812a79d4-b2d0-42d1-a1a9-069917a7af35.cleverapps.io/Acme-Planner 
+PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
+
+
+Usuarios para navegar por la página:
+
+- Rol de Manager: usuario -> manager1
+                  contraseña -> manager1
+           
+- Rol de Administrador: usuario -> administrator
+                        contraseña -> administrator
