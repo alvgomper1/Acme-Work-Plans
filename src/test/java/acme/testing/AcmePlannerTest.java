@@ -75,7 +75,7 @@ public abstract class AcmePlannerTest extends AcmeTest {
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
 		super.fillInputBoxIn("identity.email", email);
-		super.fillInputBoxIn("identity.phone", phone);
+//		super.fillInputBoxIn("identity.phone", phone);
 		super.fillInputBoxIn("accept", "true");
 		super.clickOnSubmitButton("Sign up");
 		super.checkSimplePath("/master/welcome");
