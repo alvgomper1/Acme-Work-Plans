@@ -1,6 +1,6 @@
-recordIndex,author,info,moment,text
-0,cialis,http://www.example.org,2021/04/20 17:39,million dollar
-1,viagra,http://www.example.org,2019/08/09 13:55,test shout !
-2,million dollar,http://happybirthday.com,2021/05/01 22:00,viagra
-3,viagra,http://www.sassmple-app.com,2021/04/30 10:30,million dollar
-4,cialis,http://www.sooample-app.es,2021/04/20 10:30,viagra
+recordIndex,author,info,text
+0,cialis,http://www.example.org,million dollar
+1,viagra,http://www.example.org,test shout !
+2,million dollar,http://happybirthday.com,viagra
+3,viagra,http://www.sassmple-app.com,million dollar
+4,cialis,http://www.sooample-app.es,viagra
