@@ -1,17 +1,17 @@
 
 package acme.testing.administrator.spam;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
 
-public class AdministratorUpdateTresholdTest extends AcmePlannerTest {
+public class AdministratorUpdateThresholdTest extends AcmePlannerTest {
 
 	@Override
 	@BeforeAll
@@ -26,20 +26,21 @@ public class AdministratorUpdateTresholdTest extends AcmePlannerTest {
 	 * al modulo de spam, donde se establece el nuevo valor que se le quiere probar. Se envia con el boton de "Update"
 	 * y se comprueba entrando de nuevo al modulo que el valor ha quedado registrado correctamente.
 	 */
-	@Test
-	public void actualizarTresholdPositivo() {
+
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/spam/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void updateTresholdPositive(final String t) {
 
 		super.signIn("administrator", "administrator");
-		final String t = "30.00";
-		super.clickAndGo(By.linkText("Administrator"));
-		super.clickAndGo(By.linkText("Spam Module"));
-
+		 
+		super.clickOnMenu("Administrator", "Spam Module");
 		super.clear(By.id("threshold"));
 		super.fill(By.id("threshold"), t);
 		super.clickAndGo(By.xpath("//*[@id=\"form\"]/button[1]"));
 
-		super.clickAndGo(By.linkText("Administrator"));
-		super.clickAndGo(By.linkText("Spam Module"));
+		super.clickOnMenu("Administrator", "Spam Module");
+		 
 
 		Assertions.assertEquals(t, super.locateOne(By.id("threshold")).getAttribute("value"));
 		this.signOut();
@@ -51,39 +52,25 @@ public class AdministratorUpdateTresholdTest extends AcmePlannerTest {
 	 * <p>
 	 * Una vez iniciada sesion como administrador, se accede a su menu desplegable y se entra
 	 * al modulo de spam, donde se establece el nuevo valor que se le quiere probar. Se van a probar una serie de valores
-	 * que no pueden ponerse como valor del treshold como restriccion de los requisitos. Se envia con el boton de
+	 * que no pueden ponerse como valor del treshold debido a una restriccion de los requisitos. Se envia con el boton de
 	 * "Update" y se comprueba que se nos devuelve un error de formulario para todos los intentos.
 	 */
 
-	@Test
-	public void actualizarTresholdNegativo() {
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/spam/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(20)
+	public void updateTresholdNegative(final String t) {
 
 		super.signIn("administrator", "administrator");
+		super.clickOnMenu("Administrator", "Spam Module");
 
-		//Lista de valores para introducir en el formulario
-		final List<String> t = new ArrayList<String>();
+		super.clear(By.id("threshold"));
+		super.fill(By.id("threshold"), t);
+		super.clickAndGo(By.xpath("//*[@id=\"form\"]/button[1]"));
 
-		t.add("30.005");
-		t.add("300.005");
-		t.add("200.00");
-		t.add("-50.00");
-		t.add("-50.004");
-		t.add("3Esta mal");
-		t.add("");
+		// Comprobacion de error del formulario tras pulsar el boton de actualizar el treshold
+		this.checkErrorsExist();
 
-		for (int i = 0; i < 7; i++) {
-			super.clickAndGo(By.linkText("Administrator"));
-			super.clickAndGo(By.linkText("Spam Module"));
-
-			super.clear(By.id("threshold"));
-			super.fill(By.id("threshold"), t.get(i));
-			super.clickAndGo(By.xpath("//*[@id=\"form\"]/button[1]"));
-
-			// Comprobacion de error del formulario tras pulsar el boton de actualizar el treshold
-			this.checkErrorsExist();
-
-		
-		}
 		this.signOut();
 
 	}
@@ -97,7 +84,7 @@ public class AdministratorUpdateTresholdTest extends AcmePlannerTest {
 	 */
 
 	@Test
-	public void accesoNoAutorizadoActualizarSpam() {
+	public void notAuthorisedUpdateSpam() {
 
 		super.navigateHome();
 		super.signIn("manager1", "manager1");
