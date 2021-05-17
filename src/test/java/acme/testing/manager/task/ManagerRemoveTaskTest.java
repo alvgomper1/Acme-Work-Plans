@@ -13,8 +13,8 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 	@Override
 	@BeforeAll
 	public void beforeAll() {
+
 		super.beforeAll();
-		 
 
 	}
 	/**
@@ -32,7 +32,7 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 
 		//Accedemos al listado de task del manager
 		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/list");
-
+		this.setAutoPausing(true);
 		//hacemos click en la 1 tarea del listado
 		super.clickAndGo(By.xpath("//*[@id=\"list\"]/tbody/tr[1]/td[4]"));
 
@@ -43,9 +43,9 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 		super.clickAndGo(By.xpath("//*[@id=\"form\"]/button[2]"));
 
 		//Comprobamos que la tarea no existe y se devuelve la vista de error
-		 this.driver.get(urlTaskBorrada);
+		this.driver.get(urlTaskBorrada);
 		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
-
+		this.setAutoPausing(false);
 		//Cerramos sesion
 		super.signOut();
 	}
@@ -67,12 +67,14 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 
 		//Accedemos al listado de task del manager
 		this.driver.get("http://localhost:8090/Acme-Planner/manager/task/list");
-
+		this.setAutoPausing(true);
 		//hacemos click en la 1 tarea del listado
 		super.clickAndGo(By.xpath("//*[@id=\"list\"]/tbody/tr[1]/td[4]"));
 
 		//Obtenemos la url de la tarea 
 		final String urlTask = super.driver.getCurrentUrl();
+
+		this.setAutoPausing(false);
 
 		//Nos logueamos con otro manager
 		super.signOut();
@@ -98,7 +100,7 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 	public void deleteTaskNegative() {
 
 		super.navigateHome();
-		 
+
 		//Accedemos a una task cualquiera del manager
 		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/show?id=34");
 
