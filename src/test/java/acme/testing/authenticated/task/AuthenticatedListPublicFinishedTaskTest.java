@@ -12,7 +12,7 @@ public class AuthenticatedListPublicFinishedTaskTest extends AcmePlannerTest{
 	@CsvFileSource(resources = "/authenticated/task/list-task-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void listTaskPositive(final int recordIndex,final String end_date, final String execution_period, final String finished, 
-		   				final String optional_link, final String start_date, final String title, final String visibility, final String workload) {		
+		   				final String optional_link,final String start_date, final String title, final String visibility, final String workload) {		
 		
 		super.signIn("administrator", "administrator");
 		
@@ -26,7 +26,9 @@ public class AuthenticatedListPublicFinishedTaskTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("workload", workload );
 		super.checkInputBoxHasValue("visibility", visibility );
 		super.checkInputBoxHasValue("finished", finished );
-
+		super.checkInputBoxHasValue("executionPeriod", execution_period );
+		super.checkInputBoxHasValue("optionalLink", optional_link );
+		
 		super.signOut();
 	}
 	
