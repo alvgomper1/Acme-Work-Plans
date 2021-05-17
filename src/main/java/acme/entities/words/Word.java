@@ -15,6 +15,8 @@ package acme.entities.words;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,6 +33,7 @@ public class Word extends DomainEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
+	@Length(min = 0, max =30)
 	protected String word;
 
 	// Derived attributes -----------------------------------------------------
