@@ -19,11 +19,13 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 		super.clickOnMenu("Manager", "Create task");
 		
 		super.fillInputBoxIn("description", description);
-		super.fillInputBoxIn("end_date", end_date );
-		super.fillInputBoxIn("optional_link", optional_link);
-		super.fillInputBoxIn("start_date", start_date);
+		super.fillInputBoxIn("endDate", end_date );
+		super.fillInputBoxIn("optionalLink", optional_link);
+		super.fillInputBoxIn("startDate", start_date);
 		super.fillInputBoxIn("title", title );
-		super.fillInputBoxIn("visibility", visibility );
+		
+		super.fillInputBoxIn("visibility", visibility);		
+		
 		super.fillInputBoxIn("workload", workload );
 		
 		super.checkNotErrorsExist();
@@ -42,11 +44,12 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 		super.clickOnMenu("Manager", "Create task");
 		
 		super.fillInputBoxIn("description", description);
-		super.fillInputBoxIn("end_date", end_date );
-		super.fillInputBoxIn("optional_link", optional_link);
-		super.fillInputBoxIn("start_date", start_date);
+		super.fillInputBoxIn("endDate", end_date );
+		super.fillInputBoxIn("optionalLink", optional_link);
+		super.fillInputBoxIn("startDate", start_date);
 		super.fillInputBoxIn("title", title );
-		super.fillInputBoxIn("visibility", visibility );
+		super.fillInputBoxIn("visibility", visibility);		
+		
 		super.fillInputBoxIn("workload", workload );
 		
 		super.checkErrorsExist();
