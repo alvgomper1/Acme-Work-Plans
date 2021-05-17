@@ -1,7 +1,9 @@
 package acme.testing.administrator.dashboard;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
@@ -11,30 +13,17 @@ public class AdministratorDashboardTests extends AcmePlannerTest{
 	
 	//Test cases--------------------------------------
 	
-	
-	@Test
-	public void administratorDashboardPositive() {
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/dashboard/dashboard-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)	
+	public void administratorDashboardPositive(final int recordIndex, final String numberPublicTasks, final String numberPrivateTasks, final String numberFinishedTasks, 
+														final String numberNonFinishedTasks, final String averageTaskExecPeriod, final String deviationTaskExecPeriod, 
+														final String maxTaskExecPeriod, final String minTaskExecPeriod, final String averageTaskWorkload, 
+														final String deviationTaskWorkload, final String maxTaskWorkload, final String minTaskWorkload) {
 		
 		super.signIn("administrator", "administrator");
 		
-		super.clickOnMenu("Administrator", "Dashboard");
-		
-		
-		final String numberPublicTasks = "12";
-		final String numberPrivateTasks = "3";
-		final String numberFinishedTasks = "6";
-		final String numberNonFinishedTasks = "9";
-		
-		final String averageTaskExecPeriod = "292";
-		final String deviationTaskExecPeriod = "277";
-		final String maxTaskExecPeriod = "1176";
-		final String minTaskExecPeriod = "48";
-		
-		final String averageTaskWorkload = "11.76";
-		final String deviationTaskWorkload = "6.91";
-		final String maxTaskWorkload = "20.00";
-		final String minTaskWorkload = "0.20";
-		
+		super.clickOnMenu("Administrator", "Dashboard");		
 		
 		Assertions.assertEquals(numberPublicTasks, super.locateOne(By.xpath("//div[2]/div/table[1]/tbody/tr[1]/td")).getText());
 		Assertions.assertEquals(numberPrivateTasks, super.locateOne(By.xpath("//div[2]/div/table[1]/tbody/tr[2]/td")).getText());
