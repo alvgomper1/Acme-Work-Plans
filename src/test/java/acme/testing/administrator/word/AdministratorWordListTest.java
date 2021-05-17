@@ -13,6 +13,7 @@
 package acme.testing.administrator.word;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
@@ -29,7 +30,8 @@ public class AdministratorWordListTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
-	public void list(final int recordIndex, final String word) {		
+	public void list(final int recordIndex, final String word) {
+		
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Module");	
@@ -42,6 +44,27 @@ public class AdministratorWordListTest extends AcmePlannerTest {
 		super.checkInputBoxHasValue("word", word);
 		
 		super.signOut();
+	}
+	
+	@Test
+	@Order(20)
+	public void AnonymousTryToListWords() {
+
+ 		super.driver.get("http://localhost:8090/Acme-Planner/administrator/word/list");
+		super.checkPanicExists();
+		
+
+	}
+	
+	@Test
+	@Order(30)
+	public void ManagerTryToListWords() {
+		super.signIn("manager1", "manager1");
+ 		super.driver.get("http://localhost:8090/Acme-Planner/administrator/word/list");
+		super.checkPanicExists();
+		super.signOut();
+		
+
 	}
 	
 	
