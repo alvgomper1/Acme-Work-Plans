@@ -45,7 +45,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/tasks.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
-	public void list(final int recordIndex, final String title, final String start_date, final String end_date, final String workload, final String visibility, final String finished) {		
+	public void listTasksAnonymous(final int recordIndex, final String title, final String start_date, final String end_date, final String workload, final String visibility, final String finished) {		
 		
 		super.navigateHome();
 		super.clickAndGo(By.linkText("Anonymous"));
