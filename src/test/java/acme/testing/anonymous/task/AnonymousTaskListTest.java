@@ -1,13 +1,13 @@
 
 package acme.testing.anonymous.task;
 
-import java.util.List;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import acme.testing.AcmePlannerTest;
 
@@ -42,31 +42,36 @@ public class AnonymousTaskListTest extends AcmePlannerTest {
 	 * para cada caso
 	 */
 
-	@Test
-	public void listTasksAnonymous() {
-
-		//Accedemos al listado de tareas no finalizadas de Anonymous
+	@ParameterizedTest
+	@CsvFileSource(resources = "/anonymous/task/tasks.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)	
+	public void listTasksAnonymous(final int recordIndex, final String title, final String start_date, final String end_date, final String workload, final String visibility, final String finished) {		
+		
 		super.navigateHome();
 		super.clickAndGo(By.linkText("Anonymous"));
+		
 
 		super.clickOnLink("List tasks not ended");
+		
+		super.checkColumnHasValue(recordIndex, 0, title);
+		super.checkColumnHasValue(recordIndex, 1, start_date);
+		super.checkColumnHasValue(recordIndex, 2, end_date);
+		super.checkColumnHasValue(recordIndex, 3, workload);
+		super.checkColumnHasValue(recordIndex, 4, visibility);
+		super.checkColumnHasValue(recordIndex, 5, finished);
+		
 
-		//Se comprueba que se muestra el listado con o sin datos
-		Assertions.assertTrue(super.exists(By.cssSelector(".control.sorting_1")) || super.exists(By.className("dataTables_empty")));
+		super.clickOnListingRecord(recordIndex);
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("startDate", start_date);
+		super.checkInputBoxHasValue("endDate", end_date);
+		super.checkInputBoxHasValue("workload", workload);
+		super.checkInputBoxHasValue("visibility", visibility);
+		super.checkInputBoxHasValue("finished", finished);
+		
 
-		//Si hay datos en el listado, recorremos los atributos finished y visibility
-		if (super.exists(By.cssSelector(".control.sorting_1"))) {
-			final List<WebElement> elements = super.driver.findElements(By.cssSelector(".control.sorting_1"));
-
-			for (int i = 1; i <= elements.size(); i++) {
-				final String finished = super.driver.findElement(By.xpath("//*[@id=\"list\"]/tbody/tr["+i+"]/td[7]")).getText();
-				final String visibility = super.driver.findElement(By.xpath("//*[@id=\"list\"]/tbody/tr[1]/td[6]")).getText();
-				//Comprobacion de la restriccion de la variable momento
-				Assertions.assertEquals("false", finished);
-				Assertions.assertEquals("PUBLIC", visibility);
-			}
-		}
-
+		
+		
 	}
 
 	/**
