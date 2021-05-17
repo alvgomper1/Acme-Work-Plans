@@ -3,7 +3,9 @@ package acme.testing.manager.create;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
@@ -27,16 +29,14 @@ public class ManagerCreateTest extends AcmePlannerTest {
 	 * Una vez convertido en manager, se comprueba que ya existe en el menu desplegable la seccion "Manager", además de
 	 * que ya no existe el link de "convertirse en manager".
 	 */
-	@Test
-	public void convertirEnManagerPositivo() {
+	@ParameterizedTest
+	@CsvFileSource(resources = "/manager/create/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void becomeManagerPositive(final String username, final String password,final String name, final String surname, final String email, final String phone) {
 
-		
-		final String password = "StrongPassword_1";
-		final String username = "alvgomperManager";
-		final String surname = "Gomez";
-		final String email = "alvManager@gmail.com";
+
 	 
-		super.signUp(username, password, username, surname, email, email);
+		super.signUp(username, password, name, surname, email, phone);
 		super.signIn(username, password);
 		assert super.exists(By.linkText("Account"));
 
@@ -59,17 +59,19 @@ public class ManagerCreateTest extends AcmePlannerTest {
 	 * al formulario de "convertirse en manager", y comprobamos que el resultado es una pagina de error, ya que no está autorizado.
 	 */
 
-	@Test
-	public void convertirEnManagerNegativo() {
+	@ParameterizedTest
+	@CsvFileSource(resources = "/manager/create/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(20)
+	public void becomeManagerNegative(final String username, final String password) {
 
-		final String password = "StrongPassword_1";
-		final String username = "alvgomperManager";
+		
 
 		super.signIn(username, password);
 		assert super.exists(By.linkText("Manager"));
 		assert !super.exists(By.linkText("Become a manager"));
 		super.driver.get("http://localhost:8090/Acme-Planner/authenticated/manager/create");
 		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
+		this.signOut();
 
 	}
 

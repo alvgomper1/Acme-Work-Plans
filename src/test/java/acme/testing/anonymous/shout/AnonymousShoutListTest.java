@@ -19,15 +19,6 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	public void beforeAll() {
 		super.beforeAll();
 
-		super.setBaseCamp("http", "localhost", "8090", "/Acme-Planner", "/master/welcome", "?language=en&debug=true");
-		super.setAutoPausing(false);
-//		this.signIn("administrator", "administrator");
-//		super.clickAndGo(By.linkText("Administrator"));
-//		super.clickOnLink("Populate DB (initial)");
-//		this.navigateHome();
-//		super.clickAndGo(By.linkText("Administrator"));
-//		super.clickOnLink("Populate DB (samples)");
-//		this.signOut();
 
 	}
 
