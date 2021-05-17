@@ -6,7 +6,10 @@ import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -35,7 +38,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	 */
 
 	@Test
-	public void listadoDeShoutsAnonymous() {
+	public void anonymousShoutListPositive2() {
 
 		//Accedemos al listado de shouts de anonymous
 		super.navigateHome();
@@ -74,7 +77,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	 */
 
 	@Test
-	public void listadoDeShoutsAnonymousNegativo() {
+	public void anonymousShoutListNegative() {
 
 		super.signIn("administrator", "administrator");
  		super.driver.get("http://localhost:8090/Acme-Planner/anonymous/shout/list");
@@ -82,6 +85,28 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 		 
 		this.signOut();
 
+	}
+	
+	/**
+	 * La feature que prueba este test es la de listar tareas siendo un usuario anonymous, es decir, sin autenticar
+	 * <p>
+	 * Este metodo accede al menu desplegable de anonymous y entra al listado
+	 * shouts. Debe comrobar que el listado se muestra igual que nuestro archivo csv de entrada, en el que introducimos
+	 *  los registros del sample data que se deben mostrar, es decir, los que tienen un maximo de
+	 *  30 dias desde que se publicaron.
+	 */
+	@ParameterizedTest
+	@CsvFileSource(resources = "/anonymous/shout/list-recent-shouts.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void anonymousShoutListPositive(final int recordIndex,final String moment,final String author,final String text) {		
+	 
+		
+		super.clickOnMenu("Anonymous", "List of shouts");
+		
+		super.checkColumnHasValue(recordIndex, 0, moment);
+		super.checkColumnHasValue(recordIndex, 1, author);
+		super.checkColumnHasValue(recordIndex, 2, text);
+	
 	}
 
 	
