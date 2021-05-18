@@ -14,7 +14,6 @@ package acme.testing;
 
 import org.hibernate.internal.util.StringHelper;
 import org.junit.jupiter.api.BeforeAll;
-import org.openqa.selenium.By;
 
 public abstract class AcmePlannerTest extends AcmeTest {
 
@@ -25,8 +24,9 @@ public abstract class AcmePlannerTest extends AcmeTest {
 	@Override
 	@BeforeAll
 	public void beforeAll() {
+		super.setHeadless(true);
 		super.beforeAll();
-
+		
 		super.setBaseCamp("http", "localhost", "8090", "/Acme-Planner", "/master/welcome", "?language=en&debug=true");
 		super.setAutoPausing(false);
 		
@@ -82,14 +82,4 @@ public abstract class AcmePlannerTest extends AcmeTest {
 		super.checkSimplePath("/master/welcome");
 	}
 
-	protected void checkEntityNotExistsInList(final int id) {
-
-		By locator;
-		final String idEntity= String.valueOf(id);
-		
-		locator = By.xpath(String.format("//*[@id='list']/tbody/tr[@data-item-id='%s']", idEntity));
-		this.checkNotExists(locator);
-		
-		
-	}
 }

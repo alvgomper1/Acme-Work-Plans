@@ -51,14 +51,29 @@ public abstract class AcmeTest extends AbstractTest {
 		assert super.exists(locator) : String.format("Cannot find alert '%s'", className);
 	}
 
-	protected void checkPanicExists() {
-		assert false;
+protected void checkPanicExists() {
+		
+		final By locator;
+		locator= By.xpath("/html/body/div[2]/div/h1");
+		
+		if(super.exists(locator)) {
+			assert (super.driver.findElement(locator).getText().equals("Unexpected error"));
+		}else {
+			assert false;
+		}
+		
 	}
 
 	protected void checkNotPanicExists() {
-		assert false;
+		final By locator;
+		locator= By.xpath("/html/body/div[2]/div/h1");
+		
+		if(super.exists(locator)) {
+			assert ( !super.driver.findElement(locator).getText().equals("Unexpected error"));
+		}else {
+			assert true;
+		}
 	}
-
 	protected void checkErrorsExist() {
 		By locator;
 		List<WebElement> errors;
