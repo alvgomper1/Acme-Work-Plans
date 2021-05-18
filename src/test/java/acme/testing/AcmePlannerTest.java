@@ -24,7 +24,9 @@ public abstract class AcmePlannerTest extends AcmeTest {
 		super.checkAlertExists(true);		
 		this.signOut();
 	}
-
+	
+	
+	
 	// Business methods -------------------------------------------------------
 	
 	protected void signIn(final String username, final String password) {
