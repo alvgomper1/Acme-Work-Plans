@@ -1,0 +1,7 @@
+recordIndex,title,startDate,endDate,workload,description,optionalLink,visibility,executionPeriod,finished
+0,Example task 9,2021/01/01 00:00,2021/02/22 00:00,10.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,1176,false
+1,Example task 10,2021/04/04 00:00,2021/04/12 00:00,15.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,192,false
+2,Example task 11,2021/04/08 00:00,2021/04/12 00:00,15.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,96,false
+3,Example task 13,2020/10/20 00:00,2020/10/25 00:00,19.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,120,false
+4,Example task 14,2021/03/01 00:00,2021/03/11 00:00,19.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,240,false
+5,Example task 15,2021/03/01 00:00,2021/03/11 00:00,19.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,240,false

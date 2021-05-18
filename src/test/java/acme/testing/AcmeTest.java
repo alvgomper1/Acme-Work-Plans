@@ -15,7 +15,6 @@ package acme.testing;
 import java.util.List;
 
 import org.hibernate.internal.util.StringHelper;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -58,7 +57,7 @@ public abstract class AcmeTest extends AbstractTest {
 		locator= By.xpath("/html/body/div[2]/div/h1");
 		
 		if(super.exists(locator)) {
-			Assertions.assertEquals("Unexpected error", super.driver.findElement(locator).getText());
+			assert (super.driver.findElement(locator).getText().equals("Unexpected error"));
 		}else {
 			assert false;
 		}
@@ -70,7 +69,7 @@ public abstract class AcmeTest extends AbstractTest {
 		locator= By.xpath("/html/body/div[2]/div/h1");
 		
 		if(super.exists(locator)) {
-			Assertions.assertNotEquals("Unexpected error", super.driver.findElement(locator).getText());
+			assert ( !super.driver.findElement(locator).getText().equals("Unexpected error"));
 		}else {
 			assert true;
 		}
@@ -159,7 +158,7 @@ public abstract class AcmeTest extends AbstractTest {
 		contents = (contents == null ? "" : contents.trim());
 		value = (expectedValue != null ? expectedValue.trim() : "");
 
-		assert contents.equals(value) : String.format("Expected value '%s' in input box '%s', but '%s' was found", expectedValue, name, value);
+		assert contents.equals(value) : String.format("Expected value '%s' in input box '%s', but '%s' was found", expectedValue, name, contents);
 	}
 
 	protected void checkColumnHasValue(final int recordIndex, final int attributeIndex, final String expectedValue) {
