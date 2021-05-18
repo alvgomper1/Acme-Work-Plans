@@ -1,8 +1,0 @@
-recordIndex,title,start_date_time,end_date_time,workload,description,optional_link,visibility,finished
-0,,2021/07/09 00:00,2021/07/11 00:00,1.2,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,PUBLIC,true
-0,Example updated task 1,,2021/07/11 00:00,1.2,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,PRIVATE,false
-0,Example updated task 1,2021/07/09 00:00,,1.2,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,PRIVATE,false
-0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,1.2,,http://www.sample-updated-app.com,PRIVATE,false
-0,Example updated task 1,2021/07/11 00:00,2021/07/09 00:00,1.2,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,PUBLIC,true
-0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,100000000.0,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,PUBLIC,true
-0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,-1.2,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,PUBLIC,true

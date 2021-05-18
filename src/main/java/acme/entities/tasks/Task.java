@@ -13,6 +13,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
+import org.springframework.lang.NonNull;
 
 import acme.entities.roles.Manager;
 import acme.framework.entities.DomainEntity;
@@ -32,13 +33,14 @@ public class Task extends DomainEntity{
 	
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
+	@NonNull
 	protected Date				startDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
+	@NonNull
 	protected Date				endDate;
 	
+	@NonNull
 	@Min(0)
 	@Digits(integer = 2, fraction = 2)
 	protected Double workload;
