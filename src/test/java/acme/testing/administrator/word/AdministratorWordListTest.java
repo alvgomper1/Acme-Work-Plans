@@ -55,7 +55,7 @@ public class AdministratorWordListTest extends AcmePlannerTest {
 	
 	@Test
 	@Order(20)
-	public void AnonymousTryToListWords() {
+	public void AnonymousTriesToListWords() {
 
  		super.driver.get("http://localhost:8090/Acme-Planner/administrator/word/list");
 		super.checkPanicExists();
@@ -69,7 +69,7 @@ public class AdministratorWordListTest extends AcmePlannerTest {
 	
 	@Test
 	@Order(30)
-	public void ManagerTryToListWords() {
+	public void ManagerTriesToListWords() {
 		super.signIn("manager1", "manager1");
  		super.driver.get("http://localhost:8090/Acme-Planner/administrator/word/list");
 		super.checkPanicExists();
