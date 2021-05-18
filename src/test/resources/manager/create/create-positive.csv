@@ -1,0 +1,4 @@
+username,password,name,surname,email,phone
+alvgomperManager,StrongPassword_1,Alvaro,Gomez,alvManager@gmail.com,654321234
+alvgomperManager2,StrongPassword_1,Alvaro,Gomez,alvManager2@gmail.com,654321232
+ 

@@ -143,6 +143,7 @@ public abstract class AbstractTest {
 	protected void afterAll() {
 		if (this.driver != null)
 			this.driver.quit();
+		
 	}
 
 	// Sleep methods ----------------------------------------------------------
