@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
-
+ 
 public class AuthenticatedTaskListTest extends AcmePlannerTest{
 	
 	/**
