@@ -1,4 +1,4 @@
-recordIndex,  endDate,	executionPeriod,	finished,	optionalLink,	startDate,	title,	visibility,	workload,	description
+recordIndex, endDate,	executionPeriod,	finished,	optionalLink,	startDate,	title,	visibility,	workload,	description
 0	,2021/01/04 00:00,	72,	true,	http://www.sample-app.com,	2021/01/01 00:00,	Example task 2,	PUBLIC,	1.20,	This is the oldest announcement in the system.
 1	,2021/08/11 00:00,	48,	true,	http://www.sample-app.com,	2021/08/09 00:00,	Example task 3,	PUBLIC,	3.00,	This is the oldest announcement in the system.
 2	,2021/01/22 00:00,	336,	true,	http://www.sample-app.com,	2021/01/08 00:00,	Example task 5,	PUBLIC,	5.00,	This is the oldest announcement in the system.
