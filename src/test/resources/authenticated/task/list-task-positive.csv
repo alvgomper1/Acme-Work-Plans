@@ -4,4 +4,3 @@ recordIndex,	end_date,	execution_period,	finished,	optional_link,	start_date,	ti
 2	,2021/01/22 00:00,	336,	true,	http://www.sample-app.com,	2021/01/08 00:00,	Example task 5,	PUBLIC,	5.00,	This is the oldest announcement in the system.
 3	,2021/02/22 00:00,	432,	true,	http://www.sample-app.com,	2021/02/04 00:00,	Example task 6,	PUBLIC,	10.00,	This is the oldest announcement in the system.
 4	,2021/01/11 00:00,	240,	true,	http://www.sample-app.com,	2021/01/01 00:00,	Example task 12,	PUBLIC,	19.00,	This is the oldest announcement in the system.
- 
