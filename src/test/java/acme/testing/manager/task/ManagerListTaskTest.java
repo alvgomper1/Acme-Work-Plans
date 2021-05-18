@@ -45,11 +45,10 @@ public class ManagerListTaskTest extends AcmePlannerTest {
 		super.checkInputBoxHasValue("workload", workload);
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("optionalLink", optionalLink);
-		super.fillInputBoxIn("visibility", visibility);
-		int value = 0;
-		if (finished == "true") value = 1;
-		if (finished == "false") value = 0;
-		super.fillInputBoxIn("finished", String.valueOf(value));
+		if (visibility == "PUBLIC") super.checkInputBoxHasValue("visibility", "Public");
+		if (visibility == "PRIVATE") super.checkInputBoxHasValue("visibility", "Private");
+		if (finished == "true") super.checkInputBoxHasValue("finished", "Finished");
+		if (finished == "false") super.checkInputBoxHasValue("finished", "Not finished");
 		super.checkInputBoxHasValue("executionPeriod", executionPeriod);
 		
 		super.signOut();
