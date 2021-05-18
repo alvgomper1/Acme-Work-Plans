@@ -1,0 +1,15 @@
+recordIndex,title,startDate,endDate,workload,description,optionalLink,visibility, finished, executionPeriod
+0,Example task 1,2021/07/08 00:00,2021/07/10 00:00,0.20,This is the oldest announcement in the system.,http://www.sample-app.com,PRIVATE,false,48
+1,Example task 3,2021/08/09 00:00,2021/08/11 00:00,3.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,true,48
+2,Example task 7,2021/02/04 00:00,2021/02/23 00:00,6.00,This is the oldest announcement in the system.,http://www.sample-app.com,PRIVATE,false,456
+3,Example task 9,2021/01/01 00:00,2021/02/22 00:00,10.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,false,1176
+4,Example task 6,2021/02/04 00:00,2021/02/22 00:00,10.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,true,432
+5,Example task 8,2021/02/01 00:00,2021/02/23 00:00,15.00,This is the oldest announcement in the system.,http://www.sample-app.com,PRIVATE,false,528
+6,Example task 10,2021/04/04 00:00,2021/04/12 00:00,15.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,false,192
+7,Example task 11,2021/04/08 00:00,2021/04/12 00:00,15.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,false,96
+8,Example task 12,2021/01/01 00:00,2021/01/11 00:00,19.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,true,240
+9,Example task 13,2020/10/20 00:00,2020/10/25 00:00,19.00,This is the oldest announcement in the system.,http://www.sample-app.com, PUBLIC,false,120
+10,Example task 14,2021/03/01 00:00,2021/03/11 00:00,19.00,This is the oldest announcement in the system.,http://www.sample-app.com,PUBLIC,false,240
+11,Example task 15,2021/03/01 00:00,2021/03/11 00:00,19.00,This is the oldest announcement in the system.,http://www.sample-app.com, PUBLIC,false,240
+12,Example task 4,2021/01/02 00:00,2021/01/09 00:00,20.00,This is the oldest announcement in the system.,http://www.sample-app.com, PUBLIC,true,168
+
