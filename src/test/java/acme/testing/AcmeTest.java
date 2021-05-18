@@ -51,8 +51,8 @@ public abstract class AcmeTest extends AbstractTest {
 		assert super.exists(locator) : String.format("Cannot find alert '%s'", className);
 	}
 
+
 protected void checkPanicExists() {
-		
 		final By locator;
 		locator= By.xpath("/html/body/div[2]/div/h1");
 		
@@ -157,7 +157,7 @@ protected void checkPanicExists() {
 		contents = (contents == null ? "" : contents.trim());
 		value = (expectedValue != null ? expectedValue.trim() : "");
 
-		assert contents.equals(value) : String.format("Expected value '%s' in input box '%s', but '%s' was found", expectedValue, name, value);
+		assert contents.equals(value) : String.format("Expected value '%s' in input box '%s', but '%s' was found", expectedValue, name, contents);
 	}
 
 	protected void checkColumnHasValue(final int recordIndex, final int attributeIndex, final String expectedValue) {
