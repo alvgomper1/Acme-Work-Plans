@@ -24,16 +24,7 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 
 	// Lifecycle management ---------------------------------------------------
 	
-	//No le ponemos etiquetas porque solo se usará en algunos tests
-	public void resetDataBase() {
-		
-		this.navigateHome();
-		this.signIn("administrator", "administrator");
-		
-		super.clickOnMenu("Administrator", "Populate DB (samples)");
-		super.checkAlertExists(true);		
-		this.signOut();
-	}
+	
 	
 	
 	
@@ -172,7 +163,16 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 		
 		// Ancillary methods ------------------------------------------------------
 		
-	
+			//No le ponemos etiquetas porque solo se usará en algunos tests
+			public void resetDataBase() {
+				
+				this.navigateHome();
+				this.signIn("administrator", "administrator");
+				
+				super.clickOnMenu("Administrator", "Populate DB (samples)");
+				super.checkAlertExists(true);		
+				this.signOut();
+			}
 	
 		
 }
