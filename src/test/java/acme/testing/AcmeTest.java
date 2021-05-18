@@ -159,7 +159,7 @@ public abstract class AcmeTest extends AbstractTest {
 		contents = (contents == null ? "" : contents.trim());
 		value = (expectedValue != null ? expectedValue.trim() : "");
 
-		assert contents.equals(value) : String.format("Expected value '%s' in input box '%s', but '%s' was found", expectedValue, name, value);
+		assert contents.equals(value) : String.format("Expected value '%s' in input box '%s', but '%s' was found", expectedValue, name, contents);
 	}
 
 	protected void checkColumnHasValue(final int recordIndex, final int attributeIndex, final String expectedValue) {
