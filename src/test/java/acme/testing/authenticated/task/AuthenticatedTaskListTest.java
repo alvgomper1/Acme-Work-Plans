@@ -20,7 +20,7 @@ public class AuthenticatedTaskListTest extends AcmePlannerTest{
 	 */  
 
 	
-	@ParameterizedTest
+	@ParameterizedTest 
 	@CsvFileSource(resources = "/authenticated/task/list-task-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void listTasksAuthenticatedPositive(final int recordIndex,final String endDate, final String executionPeriod, final String finished, 
