@@ -75,6 +75,12 @@ public abstract class AbstractTest {
 		assert !StringHelper.isBlank(contextPath) && contextPath.startsWith("/") && !contextPath.endsWith("/");
 		assert !StringHelper.isBlank(contextHome) && contextHome.startsWith("/") && !contextHome.endsWith("/");
 		assert !StringHelper.isBlank(contextQuery) && contextQuery.startsWith("?");
+		
+		this.protocol = protocol;
+		this.host = host;
+		this.port = port;
+		this.contextPath = contextPath;
+		this.contextQuery = contextQuery;
 
 		this.baseUrl = String.format("%s://%s:%s%s", protocol, host, port, contextPath);
 		this.homeUrl = String.format("%s%s%s", this.baseUrl, contextHome, contextQuery);
@@ -308,8 +314,8 @@ public abstract class AbstractTest {
 
 		this.navigate(() -> {
 			String url;
-
-			url = String.format("%s/%s?%s&%s", this.baseUrl, path, this.contextQuery, query);
+						
+			url = String.format("%s%s%s%s", this.baseUrl, path, this.contextQuery, query);
 			this.driver.get(url);
 			this.longSleep();
 		});
@@ -384,8 +390,7 @@ public abstract class AbstractTest {
 	protected boolean isSimpleQuery(final String query) {
 		boolean result;
 
-		result = StringHelper.isBlank(query) || //
-			(!query.startsWith("?") && !query.startsWith("&"));
+		result = query == null || (!query.startsWith("?") && !query.startsWith("&"));
 
 		return result;
 	}

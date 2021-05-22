@@ -14,6 +14,7 @@ package acme.testing;
 
 import org.hibernate.internal.util.StringHelper;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.WebElement;
 
 public abstract class AcmePlannerTest extends AcmeTest {
 
@@ -38,6 +39,15 @@ public abstract class AcmePlannerTest extends AcmeTest {
 	}
 
 	// Business methods -------------------------------------------------------
+	protected Integer getEntityIdFromRow(final int recordIndex) {
+		
+		final WebElement row;
+		final String entityId;
+		
+		row = super.getRowAsWebElement(recordIndex);
+		entityId= row.getAttribute("data-item-id");
+		return Integer.valueOf(entityId);
+	}
 	
 	protected void signIn(final String username, final String password) {
 		assert !StringHelper.isBlank(username);
