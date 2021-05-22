@@ -49,6 +49,13 @@ public abstract class AcmePlannerTest extends AcmeTest {
 		return Integer.valueOf(entityId);
 	}
 	
+	protected void checkEntityIdFromRowHasValue(final Integer recordIndex, final Integer id) {
+		assert recordIndex >= 0;
+		Integer entityId;	
+		entityId= this.getEntityIdFromRow(recordIndex);
+		assert entityId.equals(id): String.format("Entity id from the row has value %d, does not match the given value: %d ", entityId,id);
+	}
+	
 	protected void signIn(final String username, final String password) {
 		assert !StringHelper.isBlank(username);
 		assert !StringHelper.isBlank(password);
