@@ -97,5 +97,15 @@ public abstract class AcmePlannerTest extends AcmeTest {
 		super.clickOnSubmitButton("Sign up");
 		super.checkSimplePath("/master/welcome");
 	}
+	
+	public void resetDataBase() {
+		
+		this.navigateHome();
+		this.signIn("administrator", "administrator");
+		
+		super.clickOnMenu("Administrator", "Populate DB (samples)");
+		super.checkAlertExists(true);		
+		this.signOut();
+	}
 
 }

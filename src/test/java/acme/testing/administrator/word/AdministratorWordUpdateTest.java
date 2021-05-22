@@ -36,7 +36,8 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
-	public void updatePositive(final Integer recordIndex, final Integer id, final String oldWord, final String newWord) {		
+	public void updatePositive(final Integer recordIndex, final Integer id, final String oldWord, final String newWord) {
+		this.resetDataBase();
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Module");	
@@ -62,7 +63,27 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		super.signOut();
 	}
 	
-	
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/word/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(20)	
+	public void updatePositive2(final Integer recordIndex, final Integer id, final String oldWord, final String newWord) {		
+		super.resetDataBase();
+		super.signIn("administrator", "administrator");
+		
+		final String deleteWordSimplePath=String.format("/administrator/word/update?id=%s", id);
+		final String urlUpdateWord= super.getBaseUrl() + deleteWordSimplePath;
+		this.driver.get(urlUpdateWord);
+		
+		super.checkInputBoxHasValue("word", oldWord);
+		
+		super.fillInputBoxIn("word", newWord);
+		super.clickOnSubmitButton("Update");
+		
+		this.driver.get(urlUpdateWord);
+		super.checkInputBoxHasValue("word", newWord);
+
+		super.signOut();
+	}
 	
 	// Ancillary methods ------------------------------------------------------
 
