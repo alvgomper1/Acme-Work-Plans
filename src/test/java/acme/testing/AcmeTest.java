@@ -1,7 +1,7 @@
 /*
  * AcmeTest.java
  *
- * Copyright (C) 2021 Mary Design-Testing and John Design-Testing.
+ * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
  * In keeping with the traditional purpose of furthering education and research, it is
  * the policy of the copyright owner to permit non-commercial use and redistribution of
@@ -51,29 +51,20 @@ public abstract class AcmeTest extends AbstractTest {
 		assert super.exists(locator) : String.format("Cannot find alert '%s'", className);
 	}
 
-protected void checkPanicExists() {
-		
-		final By locator;
-		locator= By.xpath("/html/body/div[2]/div/h1");
-		
-		if(super.exists(locator)) {
-			assert (super.driver.findElement(locator).getText().equals("Unexpected error"));
-		}else {
-			assert false;
-		}
-		
+	protected void checkPanicExists() {
+		By locator;
+
+		locator = By.xpath("//h1[normalize-space() = 'Unexpected error']");
+		assert super.exists(locator) : "Action didn't result in panic";		
 	}
 
 	protected void checkNotPanicExists() {
-		final By locator;
-		locator= By.xpath("/html/body/div[2]/div/h1");
-		
-		if(super.exists(locator)) {
-			assert ( !super.driver.findElement(locator).getText().equals("Unexpected error"));
-		}else {
-			assert true;
-		}
+		By locator;
+
+		locator = By.xpath("h1[normalize-space() = 'Unexpected error'");
+		assert !super.exists(locator) : "Action resulted in panic";
 	}
+
 	protected void checkErrorsExist() {
 		By locator;
 		List<WebElement> errors;
@@ -177,7 +168,7 @@ protected void checkPanicExists() {
 		else {
 			toggle = row.get(0);
 			toggle.click();
-			contents = (String) this.executor.executeScript("return arguments[0].innerText;", attribute);
+			contents = (String) super.executor.executeScript("return arguments[0].innerText;", attribute);
 			toggle.click();
 		}
 
@@ -214,12 +205,12 @@ protected void checkPanicExists() {
 			case "hidden":
 				proxyXpath = String.format("//input[@name='%s$proxy' and @type='checkbox']", name);
 				proxyLocator = By.xpath(proxyXpath);
-				assert value == null || value == "true" || value == "false" : String.format("Input box '%s' cannot be set to '%s'", name, value);
+				assert value == null || value.equals("true") || value.equals("false") : String.format("Input box '%s' cannot be set to '%s'", name, value);
 				assert super.exists(proxyLocator) : String.format("Cannot find proxy for input box '%s'", name);
 				inputProxy = super.locateOne(proxyLocator);
-				if (inputProxy.getAttribute("checked") != null && (value == null || value == "false"))
+				if (inputProxy.getAttribute("checked") != null && (value == null || value.equals("false")))
 					inputProxy.click();
-				else if (inputProxy.getAttribute("checked") == null && value == "true")
+				else if (inputProxy.getAttribute("checked") == null && value.equals("true"))
 					inputProxy.click();
 				break;
 			default:
@@ -257,7 +248,7 @@ protected void checkPanicExists() {
 			}
 		} catch (final Throwable oops) {
 			// INFO: Can silently ignore the exception here.
-			// INFO+ Sometimes, the toggle get's unexpectedly stale.
+			// INFO+ Sometimes, the toggle gets stale unexpectedly.
 		}
 
 		headerLocator = By.xpath(String.format("//div[@id='mainMenu']/ul/li/a[normalize-space()='%s']", header));
@@ -268,7 +259,7 @@ protected void checkPanicExists() {
 				super.clickAndGo(headerLocator);
 			} catch (final Throwable oops) {
 				// INFO: Can silently ignore the exception here.
-				// INFO+ Sometimes, the toggle get's unexpectedly stale
+				// INFO+ Sometimes, the toggle gets stale unexpectedly
 				// INFO+ and that has an impact on the main menu.
 			} 
 			optionLocator = By.xpath(String.format("//div[@id='mainMenu']/ul/li[a[normalize-space()='%s']]/div[contains(@class, 'dropdown-menu')]/a[normalize-space()='%s']", header, option));
