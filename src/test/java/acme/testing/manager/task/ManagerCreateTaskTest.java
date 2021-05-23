@@ -13,8 +13,9 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 	/**
 	 * La feature que prueba este test es la de crear una task sin spam como manager
 	 * <p>
-	 * Para ello accedemos al formulario de creacion de task.
-	 * Cuando estamos en el formulario de crear task, se introducen datos de un task con datos correctos.
+	 * Para ello iniciamos sesion como manager1 y entramos al formulario de creacion de task
+	 * Seguidamente se comprueba que no hay errores en el formulario, entonces entramos al listado
+	 * de task y comprobamos que la task que se ha creado tiene los datos correctos.
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/create-task-spam-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -37,13 +38,28 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Create");
 		Assertions.assertFalse(super.exists(By.className("text-danger")));
 		
+		super.clickOnMenu("Manager", "List tasks");
+		super.clickOnListingRecord(recordIndex);
+		
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("startDate", start_date);
+		super.checkInputBoxHasValue("endDate", end_date);
+		super.checkInputBoxHasValue("workload", workload);
+		super.checkInputBoxHasValue("description", description);
+		super.checkInputBoxHasValue("optionalLink", optional_link);
+		if (visibility.equals("PUBLIC"))
+			super.checkInputBoxHasValue("visibility", "Public");
+		if (visibility.equals("PRIVATE"))
+			super.checkInputBoxHasValue("visibility", "Private");
+
 		super.signOut();
 	}
 	
+	
 	/**
-	 * La feature que prueba este test es la de crear una task con spam como manager  
+	 * La feature que prueba este test es la de crear, sin exito, una task con spam como manager  
 	 * <p>
-	 * Para ello accedemos al formulario de creacion de task.
+	 * Para ello iniciamos sesion como manager1 y entramos al formulario de creacion de task
 	 * Cuando estamos en el formulario de crear task, se introducen datos de un task con datos incorrectos.
 	 */
 	@ParameterizedTest
