@@ -8,7 +8,8 @@
 <acme:list readonly="true">
 	<acme:list-column code="anonymous.shout.list.label.moment" path="moment" width="20%"/>
 	<acme:list-column code="anonymous.shout.list.label.author" path="author" width="20%"/>
-	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="60%"/>
+	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="30%"/>
+	<acme:list-column code="anonymous.shout.list.label.info" path="info" width="30%"/>
 </acme:list>
 
 

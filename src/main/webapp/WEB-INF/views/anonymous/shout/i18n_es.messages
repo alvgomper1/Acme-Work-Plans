@@ -22,3 +22,4 @@ anonymous.shout.form.author.error.spam = El autor contiene spam
 anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
 anonymous.shout.list.label.text = Texto
+anonymous.shout.list.label.info = Información
