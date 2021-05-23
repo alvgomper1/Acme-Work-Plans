@@ -44,7 +44,7 @@ public class AdministratorWordListTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 0, word);
 		
 		super.clickOnListingRecord(recordIndex);
-		super.checkInputBoxHasValue("word", word);
+		super.checkInputBoxHasValue("value", word);
 		
 		super.signOut();
 	}

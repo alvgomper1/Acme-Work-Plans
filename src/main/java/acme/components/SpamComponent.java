@@ -32,7 +32,7 @@ public class SpamComponent {
 				for(int j=0; j<composedSpamWords.size(); j++) {
 					
 					final List<String>composedSpamWord = composedSpamWords.get(j);
-					if(!coincide && wordsInput.size()-i >= composedSpamWord.size()) {
+					if( wordsInput.size()-i >= composedSpamWord.size()) {
 						 coincide = SpamComponent.containSpamRecursive(wordsInput,composedSpamWord,i,0);
 						 if(coincide) {
 							 numIndexAdd=composedSpamWord.size();
@@ -125,7 +125,7 @@ public class SpamComponent {
 
 		final List<String> stringSpamWords= new ArrayList<String>();
 		for(final Word w:wordList) {
-			stringSpamWords.add(w.getWord());
+			stringSpamWords.add(w.getValue());
 		}
 		return stringSpamWords;
 		

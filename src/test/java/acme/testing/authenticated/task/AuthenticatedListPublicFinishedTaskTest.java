@@ -1,6 +1,7 @@
 package acme.testing.authenticated.task;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -39,5 +40,12 @@ public class AuthenticatedListPublicFinishedTaskTest extends AcmePlannerTest{
 		
 		super.signOut();
 	}
+	@Test
+	public void listTaskNegative() {
+
+		super.navigateHome();		
+		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/list");
+		this.checkPanicExists();
+		}
 	
 }

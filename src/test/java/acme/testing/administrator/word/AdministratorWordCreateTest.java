@@ -41,7 +41,7 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 		super.clickAndWait(By.xpath("//*[@id='form']/button")); //Create word button
 
 		super.checkSimplePath("/administrator/word/create");
-		super.fillInputBoxIn("word", word);
+		super.fillInputBoxIn("value", word);
 		super.clickOnSubmitButton("Create");
 		//super.checkNotErrorsExist();
 		

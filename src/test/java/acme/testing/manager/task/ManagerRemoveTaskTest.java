@@ -1,7 +1,6 @@
 
 package acme.testing.manager.task;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -44,7 +43,8 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 
 		//Comprobamos que la tarea no existe y se devuelve la vista de error
 		this.driver.get(urlTaskBorrada);
-		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
+
+		this.checkPanicExists();
 		this.setAutoPausing(false);
 		//Cerramos sesion
 		super.signOut();
@@ -84,7 +84,7 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 		this.driver.get(urlTask);
 
 		//Comprobamos que no hay acceso, por lo que no podemos borrarla
-		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
+		this.checkPanicExists();
 		super.signOut();
 
 	}
@@ -105,7 +105,7 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/show?id=34");
 
 		//Comprobamos que no hay acceso, por lo que no podemos borrarla
-		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
+		this.checkPanicExists();
 
 	}
 

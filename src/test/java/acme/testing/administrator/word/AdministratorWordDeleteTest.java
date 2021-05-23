@@ -53,7 +53,7 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 0, word);
 		
 		super.clickOnListingRecord(recordIndex);
-		super.checkInputBoxHasValue("word", word);
+		super.checkInputBoxHasValue("value", word);
 		final String urlShowDeletedWord= this.driver.getCurrentUrl();  //IP:Port/Acme-Planner/administrator/word/show?id=X
 		
 		super.clickOnSubmitButton("Delete");
@@ -164,6 +164,7 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 		// Ancillary methods ------------------------------------------------------
 		
 			
+			@Override
 			public void resetDataBase() {
 				
 				this.navigateHome();

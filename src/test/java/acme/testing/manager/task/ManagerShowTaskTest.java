@@ -1,6 +1,5 @@
 package acme.testing.manager.task;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -58,7 +57,7 @@ public class ManagerShowTaskTest extends AcmePlannerTest {
 		super.navigateHome();
 		assert !super.exists(By.linkText("Manager"));
 		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/show?id=27");
-		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
+		this.checkPanicExists();	
 	}
 	
 	/**
@@ -73,7 +72,7 @@ public class ManagerShowTaskTest extends AcmePlannerTest {
 		super.navigateHome();
 		this.signIn("manager1", "manager1");
 		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/show?id=67");
-		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
-	}
+		this.checkPanicExists();
+		}
 }
  

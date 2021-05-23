@@ -24,7 +24,7 @@
 </acme:form>
 <br>
 <acme:list readonly="false">
-	<acme:list-column code="administrator.word.list.label.words" path="word" width="100%"/>
+	<acme:list-column code="administrator.word.list.label.words" path="value" width="100%"/>
 	
 </acme:list>
 

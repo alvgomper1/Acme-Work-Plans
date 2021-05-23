@@ -52,7 +52,7 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model,"word");
+		request.unbind(entity, model,"value");
 		
 	}
 	@Override

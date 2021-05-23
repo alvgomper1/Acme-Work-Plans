@@ -90,8 +90,7 @@ public class AdministratorUpdateThresholdTest extends AcmePlannerTest {
 		super.signIn("manager1", "manager1");
 
 		super.driver.get("http://localhost:8090/Acme-Planner/administrator/spam/update");
-		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
-
+		this.checkPanicExists();
 	}
 
 }

@@ -1,7 +1,6 @@
 
 package acme.testing.manager.create;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -70,7 +69,7 @@ public class ManagerCreateTest extends AcmePlannerTest {
 		assert super.exists(By.linkText("Manager"));
 		assert !super.exists(By.linkText("Become a manager"));
 		super.driver.get("http://localhost:8090/Acme-Planner/authenticated/manager/create");
-		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
+		this.checkPanicExists();
 		this.signOut();
 
 	}

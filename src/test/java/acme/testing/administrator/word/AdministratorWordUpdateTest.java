@@ -48,9 +48,9 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 0, oldWord);
 		
 		super.clickOnListingRecord(recordIndex);
-		super.checkInputBoxHasValue("word", oldWord);
+		super.checkInputBoxHasValue("value", oldWord);
 		
-		super.fillInputBoxIn("word", newWord);
+		super.fillInputBoxIn("value", newWord);
 		super.clickOnSubmitButton("Update");
 		
 		super.checkEntityIdFromRowHasValue(recordIndex, id);
@@ -58,7 +58,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 	
 		super.clickOnListingRecord(recordIndex);
 		
-		super.checkInputBoxHasValue("word", newWord);
+		super.checkInputBoxHasValue("value", newWord);
 
 		super.signOut();
 	}
@@ -83,13 +83,13 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		final String urlUpdateWord= super.getBaseUrl() + updateWordSimplePath;
 		this.driver.get(urlUpdateWord);
 		
-		super.checkInputBoxHasValue("word", oldWord);
+		super.checkInputBoxHasValue("value", oldWord);
 		
-		super.fillInputBoxIn("word", newWord);
+		super.fillInputBoxIn("value", newWord);
 		super.clickOnSubmitButton("Update");
 		
 		this.driver.get(urlUpdateWord);
-		super.checkInputBoxHasValue("word", newWord);
+		super.checkInputBoxHasValue("value", newWord);
 
 		super.signOut();
 	}
@@ -120,9 +120,9 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 0, oldWord);
 		
 		super.clickOnListingRecord(recordIndex);
-		super.checkInputBoxHasValue("word", oldWord);
+		super.checkInputBoxHasValue("value", oldWord);
 		
-		super.fillInputBoxIn("word", newWord);
+		super.fillInputBoxIn("value", newWord);
 		super.clickOnSubmitButton("Update");
 		
 		super.checkErrorsExist();

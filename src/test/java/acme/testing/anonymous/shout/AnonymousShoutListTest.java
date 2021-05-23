@@ -81,8 +81,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 
 		super.signIn("administrator", "administrator");
  		super.driver.get("http://localhost:8090/Acme-Planner/anonymous/shout/list");
-	 	Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
-		 
+ 		this.checkPanicExists();
 		this.signOut();
 
 	}
