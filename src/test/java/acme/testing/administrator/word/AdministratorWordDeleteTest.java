@@ -163,7 +163,7 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 		
 		// Ancillary methods ------------------------------------------------------
 		
-			//No le ponemos etiquetas porque solo se usará en algunos tests
+			
 			public void resetDataBase() {
 				
 				this.navigateHome();
