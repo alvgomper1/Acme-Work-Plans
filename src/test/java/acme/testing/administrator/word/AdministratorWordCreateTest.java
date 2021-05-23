@@ -49,7 +49,7 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 		super.clickAndWait(By.xpath("//*[@id='form']/button[3]")); //List words button
 		super.checkColumnHasValue(recordIndex, 0, word);
 		super.clickOnListingRecord(recordIndex);
-		super.checkInputBoxHasValue("word", word);
+		super.checkInputBoxHasValue("value", word);
 		
 		super.signOut();
 	}
@@ -69,7 +69,7 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 		super.clickAndWait(By.xpath("//*[@id='form']/button[3]")); //List words button
 		super.clickAndWait(By.xpath("//*[@id='form']/button")); //Create word button
 		super.checkSimplePath("/administrator/word/create");
-		super.fillInputBoxIn("word", word);
+		super.fillInputBoxIn("value", word);
 		super.clickOnSubmitButton("Create");
 
 		super.checkErrorsExist();

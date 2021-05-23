@@ -163,17 +163,5 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 		
 		// Ancillary methods ------------------------------------------------------
 		
-			
-			@Override
-			public void resetDataBase() {
-				
-				this.navigateHome();
-				this.signIn("administrator", "administrator");
-				
-				super.clickOnMenu("Administrator", "Populate DB (samples)");
-				super.checkAlertExists(true);		
-				this.signOut();
-			}
-	
 		
 }
