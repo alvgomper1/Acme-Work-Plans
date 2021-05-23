@@ -11,6 +11,12 @@ import acme.testing.AcmePlannerTest;
 public class AnonymousShoutCreateTest extends AcmePlannerTest{
 
 	
+	/**
+	 * La feature que prueba este test es la de crear un shout sin spam
+	 * <p>
+	 * Para ello accedemos al formulario de creacion de shout.
+	 * Cuando estamos en el formulario de crear shout, se introducen datos de un shout sin spam
+	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-shout-spam-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -30,6 +36,12 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 		
 	}
 	
+	/**
+	 * La feature que prueba este test es la de crear un shout con spam
+	 * <p>
+	 * Para ello accedemos al formulario de creacion de shout.
+	 * Cuando estamos en el formulario de crear shout, se introducen datos de un shout con spam
+	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-shout-spam-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
