@@ -308,11 +308,25 @@ public abstract class AcmeTest extends AbstractTest {
 	// Ancillary methods ------------------------------------------------------
 
 	protected List<WebElement> getListingRecord(final int recordIndex) {
-		assert recordIndex >= 0;
+		
 
 		List<WebElement> result;
+		By columnLocator;
+		WebElement  row;
+
+		row= this.getRowAsWebElement(recordIndex);
+		columnLocator = By.tagName("td");
+		result = row.findElements(columnLocator);
+
+		return result;
+	}
+	
+	protected WebElement getRowAsWebElement(final int recordIndex) {
+		
+		assert recordIndex >= 0;
 		int pageIndex, rowIndex;
-		By listLocator, lengthLocator, paginatorLocator, pageLinkLocator, rowLocator, columnLocator;
+		By listLocator, lengthLocator, paginatorLocator, pageLinkLocator, rowLocator;
+		
 		WebElement list, lengthOption, paginator, pageLink, row;
 		List<WebElement> pageLinks, rows;
 
@@ -337,10 +351,7 @@ public abstract class AcmeTest extends AbstractTest {
 		rows = list.findElements(rowLocator);
 		assert rowIndex < rows.size() : String.format("Record index %d is out of range", recordIndex);
 		row = rows.get(rowIndex);
-		columnLocator = By.tagName("td");
-		result = row.findElements(columnLocator);
-
-		return result;
+		return row;
 	}
 
 }
