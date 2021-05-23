@@ -55,7 +55,7 @@ public class AdministratorWordUpdateService implements AbstractUpdateService<Adm
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "value");
 		
 		
 		

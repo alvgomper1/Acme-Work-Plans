@@ -1,11 +1,9 @@
 package acme.testing.authenticated.task;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
  
@@ -62,7 +60,6 @@ public class AuthenticatedTaskListTest extends AcmePlannerTest{
 	public void listTasksAuthenticatedNegative() {
 
  		super.driver.get("http://localhost:8090/Acme-Planner/authenticated/task/list");
-	 	Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
-		 
+ 		this.checkPanicExists();
 	}
 }

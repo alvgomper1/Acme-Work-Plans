@@ -75,7 +75,7 @@ public abstract class AbstractTest {
 		assert !StringHelper.isBlank(contextPath) && contextPath.startsWith("/") && !contextPath.endsWith("/");
 		assert !StringHelper.isBlank(contextHome) && contextHome.startsWith("/") && !contextHome.endsWith("/");
 		assert !StringHelper.isBlank(contextQuery) && contextQuery.startsWith("?");
-		
+
 		this.protocol = protocol;
 		this.host = host;
 		this.port = port;
@@ -85,6 +85,7 @@ public abstract class AbstractTest {
 		this.baseUrl = String.format("%s://%s:%s%s", protocol, host, port, contextPath);
 		this.homeUrl = String.format("%s%s%s", this.baseUrl, contextHome, contextQuery);
 	}
+
 
 	@Getter
 	@Setter
@@ -192,7 +193,7 @@ public abstract class AbstractTest {
 			this.sleep(counter + 1, true);
 			currentUrl = this.driver.getCurrentUrl();
 			result = this.extractSimplePath(currentUrl);
-		}		
+		}
 		assert !result.equals("/master/referrer") : "The '/master/referrer' redirector didn't work";
 
 		return result;
@@ -314,7 +315,7 @@ public abstract class AbstractTest {
 
 		this.navigate(() -> {
 			String url;
-						
+
 			url = String.format("%s%s%s%s", this.baseUrl, path, this.contextQuery, query);
 			this.driver.get(url);
 			this.longSleep();
@@ -335,7 +336,7 @@ public abstract class AbstractTest {
 		wait = new WebDriverWait(this.driver, this.defaultTimeout);
 		wait.until(WaitConditions.stalenessOf(oldHtml, htmlLocator));
 	}
-	
+
 	// Click methods ----------------------------------------------------------
 
 	protected void clickAndGo(final By locator) {
@@ -368,9 +369,7 @@ public abstract class AbstractTest {
 	protected void clickAndWait(final WebElement element) {
 		assert element != null;
 
-		this.navigate(() -> {
-			this.clickAndGo(element);
-		});
+		this.navigate(() -> this.clickAndGo(element));
 		this.longSleep();
 	}
 
@@ -397,10 +396,10 @@ public abstract class AbstractTest {
 
 	protected String extractSimplePath(final String url) {
 		assert !StringHelper.isBlank(url);
-		
+
 		String result;
 		int queryPosition;
-		
+
 		result = url.replace(this.baseUrl, "");
 		queryPosition = result.indexOf("?");
 		if (queryPosition != -1)

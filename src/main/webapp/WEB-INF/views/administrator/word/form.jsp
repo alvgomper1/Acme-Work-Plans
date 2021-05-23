@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="administrator.word.form.word" path="word"/>
+	<acme:form-textbox code="administrator.word.form.word" path="value"/>
 	<acme:form-submit test="${command != 'create'}" code="administrator.job.form.button.update" action="/administrator/word/update"/>
 	<acme:form-submit test="${command == 'create'}" code="administrator.job.form.button.create" action="/administrator/word/create"/>
 	<acme:form-submit test="${command != 'create'}" code="administrator.job.form.button.delete" action="/administrator/word/delete"/>

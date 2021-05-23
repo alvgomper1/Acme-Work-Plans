@@ -88,7 +88,7 @@
 	</bean>
 	
 	<bean id="shout03" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/05/02 00:00"/>
+		<property name="moment" value="2021/05/31 00:00"/>
 		<property name="author" value="Foo Bar"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
@@ -97,7 +97,7 @@
 	<bean id="shout04" class="acme.entities.shouts.Shout">
 		<property name="author" value="Leslie Design-Testing"/>
 		<property name="text" value="Woa! This app's so cool!"/>
-		<property name="moment" value="2021/04/30 12:30"/>
+		<property name="moment" value="2021/03/30 12:30"/>
 		<property name="info" value="http://www.sassmple-app.com"/>
 	</bean>
 	
@@ -118,14 +118,14 @@
 	<bean id="shout07" class="acme.entities.shouts.Shout">
 		<property name="author" value="Vicente"/>
 		<property name="text" value="This ain't right"/>
-		<property name="moment" value="2021/04/24 12:30"/>
+		<property name="moment" value="2021/04/22 12:30"/>
 		<property name="info" value="http://www.sample-app.net"/>
 	</bean>
 	
 	<bean id="shout08" class="acme.entities.shouts.Shout">
 		<property name="author" value="Miguel"/>
 		<property name="text" value="shout08"/>
-		<property name="moment" value="2021/05/01 12:30"/>
+		<property name="moment" value="2021/05/31 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
@@ -169,8 +169,94 @@
 	<bean id="shout14" class="acme.entities.shouts.Shout">
 		<property name="author" value="Vicente"/>
 		<property name="text" value="Shout 14"/>
-		<property name="moment" value="2021/05/03 12:30"/>
+		<property name="moment" value="2021/05/31 12:30"/>
 		<property name="info" value="http://www.sample-app.net"/>
+	</bean>
+	
+	<!-- shouts mayo -->
+	<bean id="shout15" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/31 00:00"/>
+		<property name="author" value="Alvaro"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean>
+	<bean id="shout16" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/31 00:00"/>
+		<property name="author" value="Jesus"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean>
+	<bean id="shout17" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/31 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean>
+	
+	<!-- shouts junio -->
+	<bean id="shout18" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout19" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout20" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout21" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout22" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout23" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean>
+	
+	<!-- shouts julio -->
+	<bean id="shout24" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout25" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout26" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout27" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout28" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean><bean id="shout29" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="author" value="Manolo"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
 	</bean>
 	
 
@@ -413,47 +499,47 @@
 	
 	<!-- Spam Words-->
 	<bean name="word1" class="acme.entities.words.Word">
-		<property name="word" value="sex"/>
+		<property name="value" value="sex"/>
 	</bean>
 	
 	<bean name="word2" class="acme.entities.words.Word">
-		<property name="word" value="hard core"/>
+		<property name="value" value="hard core"/>
 	</bean>
 	
 	<bean name="word3" class="acme.entities.words.Word">
-		<property name="word" value="viagra"/>
+		<property name="value" value="viagra"/>
 	</bean>
 	
 	<bean name="word4" class="acme.entities.words.Word">
-		<property name="word" value="cialis"/>
+		<property name="value" value="cialis"/>
 	</bean>
 	
 	<bean name="word5" class="acme.entities.words.Word">
-		<property name="word" value="nigeria"/>
+		<property name="value" value="nigeria"/>
 	</bean>
 	
 	<bean name="word6" class="acme.entities.words.Word">
-		<property name="word" value="you’ve won"/>
+		<property name="value" value="you’ve won"/>
 	</bean>
 	
 	<bean name="word7" class="acme.entities.words.Word">
-		<property name="word" value="million dollar"/>
+		<property name="value" value="million dollar"/>
 	</bean>
 	
 	<bean name="word8" class="acme.entities.words.Word">
-		<property name="word" value="sexo"/>
+		<property name="value" value="sexo"/>
 	</bean>
 	
 	<bean name="word9" class="acme.entities.words.Word">
-		<property name="word" value="duro"/>
+		<property name="value" value="duro"/>
 	</bean>
 	
 	<bean name="word10" class="acme.entities.words.Word">
-		<property name="word" value="has ganado"/>
+		<property name="value" value="has ganado"/>
 	</bean>
 	
 	<bean name="word11" class="acme.entities.words.Word">
-		<property name="word" value="millón de dólares"/>
+		<property name="value" value="millón de dólares"/>
 	</bean>
 
 </beans>

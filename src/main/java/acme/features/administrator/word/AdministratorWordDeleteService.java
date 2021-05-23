@@ -37,14 +37,7 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 		return true;
 	}
 
-	@Override
-	public void bind(final Request<Word> request, final Word entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
-
-		request.bind(entity, errors);
-	}
+	
 
 	@Override
 	public void unbind(final Request<Word> request, final Word entity, final Model model) {
@@ -52,7 +45,7 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model,"word");
+		request.unbind(entity, model,"value");
 		
 	}
 	@Override
@@ -81,5 +74,8 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 
 		this.repository.delete(entity);
 	}
+
+
+
 
 }

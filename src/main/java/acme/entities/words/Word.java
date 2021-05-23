@@ -34,7 +34,7 @@ public class Word extends DomainEntity {
 
 	@NotBlank
 	@Length(min = 0, max =30)
-	protected String word;
+	protected String value;
 
 	// Derived attributes -----------------------------------------------------
 

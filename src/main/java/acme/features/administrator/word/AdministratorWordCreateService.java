@@ -62,7 +62,7 @@ public class AdministratorWordCreateService implements AbstractCreateService<Adm
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "value");
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class AdministratorWordCreateService implements AbstractCreateService<Adm
 
 		Word result;
 		result= new Word();
-		result.setWord("");
+		result.setValue("");
 		return result;
 	}
 

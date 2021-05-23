@@ -77,7 +77,7 @@ public class AdministratorUpdateThresholdTest extends AcmePlannerTest {
 
 	/**
 	 * La feature que prueba este test es la de actualizar el treshold como administrador, esta vez, el caso negativo
-	 * intentado actualizarlo siendo manager
+	 * intentado actualizarlo siendo manager o anonymous
 	 * <p>
 	 * Una vez iniciada sesion como manager,se accede mediante url al modulo de spam
 	 * La comprobacion que se hace es ver si se nos ha devuelto el mensaje de error.
@@ -90,8 +90,12 @@ public class AdministratorUpdateThresholdTest extends AcmePlannerTest {
 		super.signIn("manager1", "manager1");
 
 		super.driver.get("http://localhost:8090/Acme-Planner/administrator/spam/update");
-		Assertions.assertEquals("Unexpected error", super.driver.findElement(By.xpath("/html/body/div[2]/div/h1")).getText());
-
+		this.checkPanicExists();
+		this.signOut();
+		this.navigateHome();
+		super.driver.get("http://localhost:8090/Acme-Planner/administrator/spam/update");
+		this.checkPanicExists();
+		
 	}
 
 }
