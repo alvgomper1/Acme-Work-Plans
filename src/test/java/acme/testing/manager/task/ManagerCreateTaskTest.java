@@ -10,6 +10,12 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagerCreateTaskTest extends AcmePlannerTest{
 
+	/**
+	 * La feature que prueba este test es la de crear una task sin spam como manager
+	 * <p>
+	 * Para ello accedemos al formulario de creacion de task.
+	 * Cuando estamos en el formulario de crear task, se introducen datos de un task con datos correctos.
+	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/create-task-spam-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -34,6 +40,12 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 		super.signOut();
 	}
 	
+	/**
+	 * La feature que prueba este test es la de crear una task con spam como manager  
+	 * <p>
+	 * Para ello accedemos al formulario de creacion de task.
+	 * Cuando estamos en el formulario de crear task, se introducen datos de un task con datos incorrectos.
+	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/create-task-spam-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
