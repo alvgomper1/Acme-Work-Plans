@@ -1,2 +1,2 @@
 recordIndex,username,name,surname,email,roles,status
-2,manager1,Manager,One,manager1@mail.com,Manager Authenticated,KEEP
+2,manager1,Manager,One,manager1@mail.com,Manager Authenticated,DISABLED

@@ -98,6 +98,26 @@ public class AdministratorUserAccountUpdateService implements AbstractUpdateServ
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final Boolean isEmpty = entity.getIdentity().getName().isBlank();
+		errors.state(request, !isEmpty, "identity.name", "administrator.user-account.error.empty");
+	
+		final Boolean minLenght = entity.getIdentity().getName().length()<3;
+		errors.state(request, !minLenght, "identity.name", "administrator.user-account.error.empty");
+		
+		final Boolean maxLenght = entity.getIdentity().getName().length()>20;
+		errors.state(request, !maxLenght, "identity.name", "administrator.user-account.error.empty");
+		
+		final Boolean isEmptySurname = entity.getIdentity().getSurname().isBlank();
+		errors.state(request, !isEmptySurname, "identity.surname", "administrator.user-account.error.empty");
+	
+		final Boolean minLenghtSurname = entity.getIdentity().getSurname().length()<3;
+		errors.state(request, !minLenghtSurname, "identity.surname", "administrator.user-account.error.empty");
+		
+		final Boolean maxLenghtSurname = entity.getIdentity().getSurname().length()>20;
+		errors.state(request, !maxLenghtSurname, "identity.surname", "administrator.user-account.error.empty");
+
+
 	}
 
 	@Override
