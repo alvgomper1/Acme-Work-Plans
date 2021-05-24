@@ -8,7 +8,9 @@ import acme.entities.words.Word;
 
 public class SpamComponent {
 	
-	
+	private SpamComponent() {
+		
+	}
 	
 	public static boolean containSpam(final String text, final List<Word> spamWords, final Double threshold) {
 		final List<String> stringSpamWords= SpamComponent.listWordsToStrings(spamWords);

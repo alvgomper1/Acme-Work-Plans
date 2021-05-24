@@ -5,6 +5,9 @@ import java.util.Date;
 
 public class UtilComponent {
 
+	private UtilComponent() {
+		
+	}
 	
 
 	public static Date addFecha(final Date fechaBase, final int tipoFecha, final int cantidadSumar ) { //Permite sumarle dias, horas o cualquier unidad de tiempo a otra fecha y te devuelve un Date del resultado
