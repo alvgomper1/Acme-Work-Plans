@@ -20,7 +20,16 @@ import acme.testing.AcmePlannerTest;
 
 public class AuthenticatedUpdateUserTest extends AcmePlannerTest {
 
-	
+	/**
+	 * La feature que prueba este test es actualizar el User siendo un usuario Authenticated Manager,
+	 * pero en este caso buscamos que falle
+	 * <p>
+	 * Este metodo accede al menu desplegable de Account y entra a General Data. Una vez aqui,
+	 * se cargan los datos de entrada desde el csv que se indica en la ruta de la anotación @CsvFileSource.
+	 * Este fichero tiene una entrada con los campos password y confirmation vacíos por lo que el validador lo detecta
+	 * y devuelve un error que se comprueba en este test 
+	 *
+	 */
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/userAccount/update-negative-empty.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -35,6 +44,17 @@ public class AuthenticatedUpdateUserTest extends AcmePlannerTest {
 		super.checkErrorsExist();
 	}
 	
+	/**
+	 * La feature que prueba este test es actualizar el User siendo un usuario Authenticated Manager,
+	 * pero en este caso buscamos que falle
+	 * <p>
+	 * Este metodo accede al menu desplegable de Account y entra a General Data. Una vez aqui,
+	 * se cargan los datos de entrada desde el csv que se indica en la ruta de la anotación @CsvFileSource.
+	 * Este fichero tiene dos entradas, una con la longitud menor que 5 y otra mayor de 60, cosa que no puede suceder, por lo que el validador lo detecta
+	 * y devuelve un error que se comprueba en este test 
+	 *
+	 */
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/userAccount/passwords.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
@@ -47,6 +67,17 @@ public class AuthenticatedUpdateUserTest extends AcmePlannerTest {
 		super.checkErrorsExist();
 	}
 	
+	
+	/**
+	 * La feature que prueba este test es actualizar el User siendo un usuario Authenticated Manager,
+	 * pero en este caso buscamos que falle
+	 * <p>
+	 * Este metodo accede al menu desplegable de Account y entra a General Data. Una vez aqui,
+	 * se cargan los datos de entrada desde el csv que se indica en la ruta de la anotación @CsvFileSource.
+	 * Este fichero tiene una entrada con el campo password y confirmation distintos, cosa que no puede suceder ya que deben coincidir, por lo que el validador lo detecta
+	 * y devuelve un error que se comprueba en este test 
+	 *
+	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/userAccount/update-negative-passConfirmNotMatch.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(40)
@@ -59,6 +90,17 @@ public class AuthenticatedUpdateUserTest extends AcmePlannerTest {
 		super.clickOnSubmitButton("Update");
 		super.checkErrorsExist();
 	}
+	
+	/**
+	 * La feature que prueba este test es actualizar el User siendo un usuario Authenticated Manager,
+	 * pero en este caso buscamos que falle
+	 * <p>
+	 * Este metodo accede al menu desplegable de Account y entra a General Data. Una vez aqui,
+	 * se cargan los datos de entrada desde el csv que se indica en la ruta de la anotación @CsvFileSource.
+	 * Este fichero tiene una entrada con los campos name y surname vacíos por lo que el validador lo detecta
+	 * y devuelve un error que se comprueba en este test 
+	 *
+	 */
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/userAccount/update-negative-empty.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -73,6 +115,17 @@ public class AuthenticatedUpdateUserTest extends AcmePlannerTest {
 		super.checkErrorsExist();
 	}
 	
+	/**
+	 * La feature que prueba este test es actualizar el User siendo un usuario Authenticated Manager,
+	 * pero en este caso buscamos que falle
+	 * <p>
+	 * Este metodo accede al menu desplegable de Account y entra a General Data. Una vez aqui,
+	 * se cargan los datos de entrada desde el csv que se indica en la ruta de la anotación @CsvFileSource.
+	 * Este fichero tiene una entrada con el formato de email erroneo ya que no es de la forma xxx@xxx.com por lo que el validador lo detecta
+	 * y devuelve un error que se comprueba en este test 
+	 *
+	 */
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/userAccount/update-negative-wrongEmail.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(60)
@@ -84,6 +137,14 @@ public class AuthenticatedUpdateUserTest extends AcmePlannerTest {
 		super.clickOnSubmitButton("Update");
 		super.checkErrorsExist();
 	}
+	
+	/**
+	 * La feature que prueba este test es actualizar el User siendo un usuario Authenticated Manager
+	 * <p>
+	 * Este metodo accede al menu desplegable de Account y entra a General Data. Una vez aqui,
+	 * se cargan los datos de entrada desde el csv que se indica en la ruta de la anotación @CsvFileSource y se comprueba que todos
+	 * son correctos y se actualiza bien el User.
+	 */
 
 	
 	@ParameterizedTest

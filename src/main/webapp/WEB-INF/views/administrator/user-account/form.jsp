@@ -17,13 +17,21 @@
 
 <acme:form>
 	<acme:form-textbox code="administrator.user-account.form.label.username" path="username" readonly="true"/>
+	<jstl:if test="${!canUpdate}">
 	<acme:form-textbox code="administrator.user-account.form.label.name" path="identity.name" readonly="true"/>
 	<acme:form-textbox code="administrator.user-account.form.label.surname" path="identity.surname" readonly="true"/>
+	</jstl:if>
+	<jstl:if test="${canUpdate}">
+	<acme:form-textbox code="administrator.user-account.form.label.name" path="identity.name"/>
+	<acme:form-textbox code="administrator.user-account.form.label.surname" path="identity.surname"/>
+	
+	</jstl:if>
 	<acme:form-textbox code="administrator.user-account.form.label.email" path="identity.email" readonly="true"/>
 	<acme:form-textbox code="administrator.user-account.form.label.role-list" path="roleList" readonly="true"/>
 	<acme:form-textbox code="administrator.user-account.form.label.status" path="status" readonly="true"/>
 	
 	<jstl:if test="${canUpdate}">
+		
 		<acme:form-select code="administrator.user-account.form.label.new-status" path="newStatus">
 			<acme:form-option code="KEEP" value="KEEP" selected="true"/>
 			<acme:form-option code="ENABLED" value="ENABLED"/>

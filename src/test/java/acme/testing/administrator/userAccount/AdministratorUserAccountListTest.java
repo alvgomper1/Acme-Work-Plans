@@ -21,7 +21,10 @@ import acme.testing.AcmePlannerTest;
 
 public class AdministratorUserAccountListTest extends AcmePlannerTest {
 
-	
+	/**
+	 * En este test se prueba el caso positivo de listar los userAccounts desde el rol de Administrator haciendonos uso de un csv que contiene los datos correctos de dicha lista.
+	 * Este csv está especificado en la ruta dentro de la anotación @CsvFileSource
+	 */
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/userAccount/list.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -52,11 +55,8 @@ public class AdministratorUserAccountListTest extends AcmePlannerTest {
 	
 	
 	/**
-	 * La feature que prueba este test es la de listar tareas como anonymous, pero el caso negativo, que seria intentando acceder al listado con un usuario logueado con
-	 * el rol de Administrador
-	 * <p>
-	 * Una vez loguado como administrator, lo primero es comprobar que no existe la seccion de anonymous. Despues intentamos acceder mediante url
-	 * al listado de tareas", y comprobamos que el resultado es una pagina de error, ya que no está autorizado.
+	 * La feature que prueba este test es la de listar las userAccounts desde Administrator, pero el caso negativo, que seria intentando acceder al listado sin estar
+	 * logueado como dicho rol.
 	 */
 
 	@Test
