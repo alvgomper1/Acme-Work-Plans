@@ -29,7 +29,7 @@ public class SignUpTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveSignUp(final String username, final String password, final String name, final String surname, final String email, final String phone) {
+	public void positiveSignUp(final String username, final String password, final String name, final String surname, final String email, final String accept) {
 		super.navigateHome();
 		super.clickOnLink("Sign up");
 		
@@ -39,7 +39,7 @@ public class SignUpTest extends AcmePlannerTest {
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
 		super.fillInputBoxIn("identity.email", email);
-		super.fillInputBoxIn("accept", "true");
+		super.fillInputBoxIn("accept", accept);
 		
 
 		super.clickOnSubmitButton("Sign up");
@@ -56,20 +56,20 @@ public class SignUpTest extends AcmePlannerTest {
 	 */
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/sign-up/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativeUsernameSignUp(final String username, final String password, final String name, final String surname, final String email, final String phone) {
+	public void negativeUsernameSignUp(final String username, final String password, final String name, final String surname, final String email, final String accept) {
 
 		super.navigateHome();
 		super.clickOnLink("Sign up");
 		
-		super.fillInputBoxIn("username", "");
+		super.fillInputBoxIn("username", username);
 		super.fillInputBoxIn("password", password);
 		super.fillInputBoxIn("confirmation", password);
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
 		super.fillInputBoxIn("identity.email", email);
-		super.fillInputBoxIn("accept", "true");
+		super.fillInputBoxIn("accept", accept);
 		
 
 		
@@ -88,20 +88,20 @@ public class SignUpTest extends AcmePlannerTest {
 	 */
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/sign-up/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativePasswordNotMatchSignUp(final String username, final String password, final String name, final String surname, final String email, final String phone) {
+	public void negativePasswordNotMatchSignUp(final String username, final String password, final String name, final String surname, final String email, final String accept) {
 
 		super.navigateHome();
 		super.clickOnLink("Sign up");
 		
 		super.fillInputBoxIn("username", username);
-		super.fillInputBoxIn("password", "ssssssssss");
-		super.fillInputBoxIn("confirmation", password);
+		super.fillInputBoxIn("password", password);
+		super.fillInputBoxIn("confirmation", password+"s");
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
 		super.fillInputBoxIn("identity.email", email);
-		super.fillInputBoxIn("accept", "true");
+		super.fillInputBoxIn("accept", accept);
 
 		
 		super.clickOnSubmitButton("Sign up");
@@ -118,20 +118,20 @@ public class SignUpTest extends AcmePlannerTest {
 	 */
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/sign-up/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativeAllEmptySignUp(final String username, final String password, final String name, final String surname, final String email, final String phone) {
+	public void negativeAllEmptySignUp(final String username, final String password, final String name, final String surname, final String email, final String accept) {
 
 		super.navigateHome();
 		super.clickOnLink("Sign up");
 		
-		super.fillInputBoxIn("username", "");
-		super.fillInputBoxIn("password", "");
-		super.fillInputBoxIn("confirmation", "");
-		super.fillInputBoxIn("identity.name", "");
-		super.fillInputBoxIn("identity.surname", "");
-		super.fillInputBoxIn("identity.email", "");
-		super.fillInputBoxIn("accept", "true");
+		super.fillInputBoxIn("username", username);
+		super.fillInputBoxIn("password", password);
+		super.fillInputBoxIn("confirmation", password);
+		super.fillInputBoxIn("identity.name", name);
+		super.fillInputBoxIn("identity.surname", surname);
+		super.fillInputBoxIn("identity.email", email);
+		super.fillInputBoxIn("accept", accept);
 
 		
 		super.clickOnSubmitButton("Sign up");
@@ -149,9 +149,9 @@ public class SignUpTest extends AcmePlannerTest {
 	 */
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/sign-up/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativeCheckboxEmptySignUp(final String username, final String password, final String name, final String surname, final String email, final String phone) {
+	public void negativeCheckboxEmptySignUp(final String username, final String password, final String name, final String surname, final String email, final String accept) {
 
 		super.navigateHome();
 		super.clickOnLink("Sign up");
@@ -162,6 +162,7 @@ public class SignUpTest extends AcmePlannerTest {
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
 		super.fillInputBoxIn("identity.email", email);
+		super.fillInputBoxIn("accept", accept);
 
 		
 		super.clickOnSubmitButton("Sign up");
@@ -178,9 +179,9 @@ public class SignUpTest extends AcmePlannerTest {
 	 */
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/sign-up/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativeWrongEmailFormatSignUp(final String username, final String password, final String name, final String surname, final String email, final String phone) {
+	public void negativeWrongEmailFormatSignUp(final String username, final String password, final String name, final String surname, final String email, final String accept) {
 
 		super.navigateHome();
 		super.clickOnLink("Sign up");
@@ -190,8 +191,8 @@ public class SignUpTest extends AcmePlannerTest {
 		super.fillInputBoxIn("confirmation", password);
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
-		super.fillInputBoxIn("identity.email", "sssssssssssss");
-		super.fillInputBoxIn("accept", "true");
+		super.fillInputBoxIn("identity.email", email);
+		super.fillInputBoxIn("accept", accept);
 
 		
 		super.clickOnSubmitButton("Sign up");

@@ -1,0 +1,5 @@
+username,password,name,surname,email,accept
+"",johnny,Johnny,López,john@mail.com,true
+"",,,,,true
+leslie,leslie,Leslie Marti,Ramport,leslieus.es,true
+leslie2,leslie2,Leslie2 Marti2,Ramport22,leslie2@us.es,false
