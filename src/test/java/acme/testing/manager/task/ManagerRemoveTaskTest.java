@@ -2,7 +2,10 @@
 package acme.testing.manager.task;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
@@ -107,6 +110,33 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 		//Comprobamos que no hay acceso, por lo que no podemos borrarla
 		this.checkPanicExists();
 
+	}
+	
+	//Features comprobadas en el siguiente test: Manager task Delete (Caso positivo)
+	//Esta vez intentaremos que el Manager borre las task sin pasar por el listado ni por el método show, 
+	//sino que el formulario de borrado se generará a partir de la petición GET al servicio de DELETE
+	//("manager/delete/task?id=X") en lugar del de SHOW como en el anterior test. 
+	//El CSV contiene identificadores de palabras que existen. Se espera que
+	// al intentar eliminar una palabra aparezca un error
+	//de panic.
+	
+	@ParameterizedTest
+	@CsvFileSource(resources = "/manager/task/deletePositive2.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void deletePositive2(final String taskId) {		
+		
+		super.signIn("manager1", "manager1");
+		
+		
+		final String deleteWordSimplePath=String.format("/manager/task/delete?id=%s", taskId);
+		final String urlDeleteWord= super.getBaseUrl() + deleteWordSimplePath;
+		this.driver.get(urlDeleteWord);
+
+	
+		super.checkPanicExists();
+	
+		super.signOut();
+		this.resetDataBase();
 	}
 
 }
