@@ -20,7 +20,7 @@ public class ManagerUpdateTaskTests extends AcmePlannerTest {
 	 * se actualizan correctamente y sin fallos, comprobando todos los valores.
 	 */
 
-//	@ParameterizedTest
+	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/update-positive.csv", encoding = "UTF-8", numLinesToSkip = 1)
 	@Order(10)
 	public void managerUpdateTaskPositive(final int recordIndex, final String title, final String start_date_time, final String end_date_time, final String workload, final String description, final String optional_link, final String visibility,
@@ -71,7 +71,7 @@ public class ManagerUpdateTaskTests extends AcmePlannerTest {
 	 * por los datos que se le están pasando.
 	 */
 
-	//	@ParameterizedTest
+	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/update-negative.csv", encoding = "UTF-8", numLinesToSkip = 1)
 	@Order(20)
 	public void managerUpdateTaskNegative(final int recordIndex, final String title, final String start_date_time, final String end_date_time, final String workload, final String description, final String optional_link, final String visibility,
