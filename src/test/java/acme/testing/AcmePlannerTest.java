@@ -97,5 +97,14 @@ public abstract class AcmePlannerTest extends AcmeTest {
 		super.checkAlertExists(true);		
 		this.signOut();
 	}
+	
+	public void clearDataBase() {
+		this.navigateHome();
+		this.signIn("administrator", "administrator");
+		
+		super.clickOnMenu("Administrator", "Populate DB (initial)");
+		super.checkAlertExists(true);		
+		this.signOut();
+	}
 
 }

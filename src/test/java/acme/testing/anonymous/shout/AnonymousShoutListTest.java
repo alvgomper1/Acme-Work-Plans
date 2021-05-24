@@ -3,7 +3,6 @@ package acme.testing.anonymous.shout;
 
 import java.time.LocalDate;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,13 +12,7 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutListTest extends AcmePlannerTest {
 
-	@Override
-	@BeforeAll
-	public void beforeAll() {
-		super.beforeAll();
-
-
-	}
+	
 
 	
 
