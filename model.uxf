@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>704</x>
-      <y>280</y>
-      <w>168</w>
-      <h>80</h>
+      <x>552</x>
+      <y>324</y>
+      <w>126</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 ApplicationStatus
@@ -21,35 +21,41 @@ ApplicationStatus
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>376</x>
-      <y>144</y>
-      <w>192</w>
-      <h>48</h>
+      <x>306</x>
+      <y>216</y>
+      <w>144</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 UserRole
 --
-bg=yellow</panel_attributes>
+
+--
++ getAuthority(): GrantedAuthority
++ getAuthorityName(): String
++ getIdentity(): UserIdentity
+bg=yellow
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>456</x>
-      <y>184</y>
-      <w>24</w>
-      <h>96</h>
+      <x>366</x>
+      <y>282</y>
+      <w>18</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>72</x>
-      <y>88</y>
-      <w>176</w>
-      <h>96</h>
+      <x>78</x>
+      <y>180</y>
+      <w>132</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Datatype&gt;&gt;
 UserIdentity
@@ -66,10 +72,10 @@ bg=orange
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>72</x>
-      <y>0</y>
-      <w>192</w>
-      <h>48</h>
+      <x>78</x>
+      <y>114</y>
+      <w>144</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>The full name catenates the 
 surname, a comma, and the name.
@@ -79,10 +85,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>152</x>
-      <y>40</y>
-      <w>24</w>
-      <h>64</h>
+      <x>138</x>
+      <y>144</y>
+      <w>18</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
@@ -91,10 +97,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
-      <y>160</y>
-      <w>80</w>
-      <h>24</h>
+      <x>492</x>
+      <y>234</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>Administrator
 --
@@ -105,10 +111,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
-      <y>128</y>
-      <w>80</w>
-      <h>24</h>
+      <x>492</x>
+      <y>210</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>Anonymous
 --
@@ -119,10 +125,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
-      <y>192</y>
-      <w>80</w>
-      <h>24</h>
+      <x>492</x>
+      <y>258</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>Authenticated
 --
@@ -133,10 +139,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>136</y>
-      <w>80</w>
-      <h>48</h>
+      <x>444</x>
+      <y>216</y>
+      <w>60</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;40.0;80.0;10.0</additional_attributes>
@@ -144,10 +150,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>160</y>
-      <w>80</w>
-      <h>24</h>
+      <x>444</x>
+      <y>234</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
@@ -155,10 +161,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>160</y>
-      <w>80</w>
-      <h>56</h>
+      <x>444</x>
+      <y>234</y>
+      <w>60</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;50.0</additional_attributes>
@@ -166,10 +172,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>312</x>
+      <x>258</x>
       <y>456</y>
-      <w>304</w>
-      <h>176</h>
+      <w>264</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Task
@@ -182,8 +188,11 @@ Task
 + optionalLink: String {URL}
 + visibility: Visibility {NonNull}
 + finished: Boolean {NonNull}
-+ executionPeriod: Long {Min(0)}
-+ /calculateExecutionPeriod: Long
++ /executionPeriod: Long {Min(0)}
+
+--
+
++ calculateExecutionPeriod(): long
 
 
 </panel_attributes>
@@ -192,10 +201,10 @@ Task
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>376</x>
-      <y>264</y>
-      <w>168</w>
-      <h>72</h>
+      <x>306</x>
+      <y>312</y>
+      <w>126</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Manager
@@ -206,15 +215,15 @@ Manager
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>744</x>
-      <y>128</y>
-      <w>304</w>
-      <h>96</h>
+      <x>582</x>
+      <y>210</y>
+      <w>228</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Shout
 --
-+ moment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ moment: Date {NotNull, Temporal(TIMESTAMP)}
 + author: String {NotBlank,Length(5, 25)}
 + text: String {NotBlank,Length(max=100)}
 + info: String {URL}</panel_attributes>
@@ -223,24 +232,24 @@ Shout
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>304</y>
-      <w>328</w>
-      <h>64</h>
+      <x>6</x>
+      <y>342</y>
+      <w>294</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Spam
 --
-+ threshold: Double {Digits(integer=3, fraction=2),Range(0, 100)}</panel_attributes>
++ threshold: Double {NonNull,Digits(integer=3, fraction=2),Min(0), Max(100)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>136</x>
-      <y>408</y>
-      <w>112</w>
-      <h>72</h>
+      <x>126</x>
+      <y>420</y>
+      <w>84</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 Visibility
@@ -253,15 +262,15 @@ Visibility
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>48</x>
-      <y>216</y>
-      <w>152</w>
-      <h>64</h>
+      <x>60</x>
+      <y>276</y>
+      <w>162</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Word
 --
-+ word: String {NotBlank}
++ value: String {NotBlank,Lenght(1,30)}
 
 
 </panel_attributes>
@@ -270,10 +279,10 @@ Word
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>704</x>
-      <y>400</y>
-      <w>280</w>
-      <h>224</h>
+      <x>552</x>
+      <y>414</y>
+      <w>210</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 Dashboard
@@ -298,15 +307,161 @@ Dashboard
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>456</x>
-      <y>328</y>
-      <w>96</w>
-      <h>144</h>
+      <x>366</x>
+      <y>360</y>
+      <w>72</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
 m1=*
 m2=1
 &lt; Managed by</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>0</y>
+      <w>282</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+UserAccount
+--
++ username: String {NotBlank,Lenght(5,60), Unique}
++ password: String {NotBlank,Lenght(5,60)}
++ enabled: boolean
++ identity: UserIdentity {Valid}
+--
++ hasRole(r: UserRole): boolean
++ hasRole(r: Class): boolean
++ getRole(r:String): UserRole
++ getRole(r:Class): UserRole
++ addRole(r:UserRole): void
++ removeRole(r:UserRole): void
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>366</x>
+      <y>132</y>
+      <w>42</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+m1=1..*
+m2=1
+&lt; Has</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>588</y>
+      <w>222</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>The execution period is the elapsed time in hours 
+between startDate and endDate.
+It is calculated by the method: calculateExecutionPeriod()
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>558</y>
+      <w>54</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;80.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>54</x>
+      <y>504</y>
+      <w>114</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>
+Dates cannot be in past 
+when tasks are created
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>492</y>
+      <w>108</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;70.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>258</x>
+      <y>654</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>
+The workload cannot be bigger than 
+the execution period
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>606</y>
+      <w>42</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;80.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>618</x>
+      <y>132</y>
+      <w>138</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>
+The moment must be the current 
+when the shout is created
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>180</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
