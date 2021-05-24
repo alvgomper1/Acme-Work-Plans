@@ -20,8 +20,8 @@ public class SpamComponent {
 		
 		int spamCounter = 0;
 		int totalWordsCounter=0;
-
-		for ( int i=0; i<wordsInput.size(); ) { //Comprobamos si se trata de spam simple
+		int i=0;
+		while (i<wordsInput.size()) { //Comprobamos si se trata de una palabra registrada como simple (una sola palabra)
 			final String w = wordsInput.get(i);
 			if(stringSpamWords.contains(w)) {
 				spamCounter++;
