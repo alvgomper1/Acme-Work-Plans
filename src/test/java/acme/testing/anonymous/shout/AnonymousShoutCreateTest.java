@@ -20,18 +20,42 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 	@BeforeAll
 	public void clearShouts() {
 		super.clearDataBase();
-		
 	}
-	//Test cases --------------------------------------------------------------
+	
 	/**
-	 * La feature que prueba este test es la de crear un shout sin spam ni campos vacios
+	 * La feature que realiza este test es la de inicializar la base de datos con palabras de spam
 	 * <p>
-	 * Para ello accedemos al formulario de creacion de shout.
-	 * Cuando estamos en el formulario de crear shout, se introducen datos de un shout sin spam
+	 * Para ello accedemos como administrador y creamos las palabras de spam para poder realizar los siguientes test
+	 */
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/spam/populate-spam-words.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void populateSpamWords(final String word) {
+		
+		super.signIn("administrator", "administrator");
+
+		super.clickOnMenu("Administrator", "Spam Module");	
+		super.clickAndWait(By.xpath("//*[@id='form']/button[3]")); //List words button
+		super.clickAndWait(By.xpath("//*[@id='form']/button")); //Create word button
+
+		super.checkSimplePath("/administrator/word/create");
+		super.fillInputBoxIn("value", word);
+		super.clickOnSubmitButton("Create");
+		
+		super.signOut();
+	}
+	
+	//Test cases --------------------------------------------------------------
+
+		
+	/**
+	 * La feature que prueba este test es la de crear como anonimo un shout sin spam de manera correcta
+	 * <p>
+	 * Para ello accedemos al formulario de creacion de shout como anonimo y se introducen valores correctos
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-shout-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void createShoutPositive(final String author, final String info, final String text) {
 		
 		
@@ -61,14 +85,13 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 	
 	
 	/**
-	 * La feature que prueba este test es la de crear un shout con spam
+	 * La feature que prueba este test es la de intentar crear como anonimo un shout con spam de manera incorrecta
 	 * <p>
-	 * Para ello accedemos al formulario de creacion de shout.
-	 * Cuando estamos en el formulario de crear shout, se introducen datos de un shout con spam
+	 * Para ello accedemos al formulario de creacion de shout como anonimo y se introducen valores de spam en el titulo, info y autor
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-shout-spam-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(30)
 	public void createShoutSpamNegative(final String recordIndex, final String author, final String info, final String text) {
 		
 		super.clickOnMenu("Anonymous", "Shout!");
@@ -86,14 +109,13 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 	
 	
 	/**
-	 * La feature que prueba este test es la de crear un shout con datos vacios o erroneos
+	 * La feature que prueba este test es la de intentar crear como anonimo un shout de manera erronea
 	 * <p>
-	 * Para ello accedemos al formulario de creacion de shout.
-	 * Cuando estamos en el formulario de crear shout, se introducen datos de un shout con datos erroneos
+	 * Para ello accedemos al formulario de creacion de shout como anonimo y se introducen datos vacios en info y autor
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-shout-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(40)
 	public void createShoutNegative(final String recordIndex, final String author, final String info, final String text) {
 		
 		super.clickOnMenu("Anonymous", "Shout!");

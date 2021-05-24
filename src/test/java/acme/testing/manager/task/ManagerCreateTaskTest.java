@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import acme.testing.AcmePlannerTest;
 
 public class ManagerCreateTaskTest extends AcmePlannerTest{
-
+	
 	/**
 	 * La feature que prueba este test es la de crear una task sin spam como manager
 	 * <p>
@@ -91,11 +91,11 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 	 * La feature que prueba este test es la de crear, sin exito, una task con spam como manager  
 	 * <p>
 	 * Para ello iniciamos sesion como manager1 y entramos al formulario de creacion de task
-	 * Cuando estamos en el formulario de crear task, se introducen datos de un task con datos incorrectos.
+	 * Cuando estamos en el formulario de crear task, se introducen palabras de spam en los campos de descripcion, title y optional link
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/create-task-spam-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@Order(30)
 	public void createTaskNegativeSpam(final int recordIndex, final String description, final String end_date,final String optional_link,
 								   final String start_date, final String title, final String visibility, final String workload) {
 

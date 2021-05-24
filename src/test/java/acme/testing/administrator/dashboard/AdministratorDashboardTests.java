@@ -14,7 +14,9 @@ public class AdministratorDashboardTests extends AcmePlannerTest {
 
 	/**
 	 * La feature que prueba este test es el dashboard de administrator con todas las 
-	 * métricas de la página.
+	 * métricas de la página. Aquí comprobamos las métricas de la página según el 
+	 * sample data. Todos los campos deben estar igual que el sample data para no
+	 * fallar.
 	 * <p>
 	 * Una vez iniciada sesion como administrador, se accede a su menu desplegable y se entra
 	 * al dashboard, donde se pueden ver todas las métricas organizadas.
