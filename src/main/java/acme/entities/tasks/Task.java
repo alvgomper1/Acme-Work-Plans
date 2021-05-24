@@ -52,10 +52,10 @@ public class Task extends DomainEntity{
 	@URL
 	protected String optionalLink;
 	
-	@NotNull
+	@NonNull
 	protected Visibility visibility;
 	
-	@NotNull
+	@NonNull
 	protected Boolean finished;
 	
 	@NotNull
