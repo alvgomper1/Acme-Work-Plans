@@ -24,6 +24,8 @@ administrator.user-account.form.button.return = Volver
 
 administrator.user-account.list.title = Lista de cuentas de usuario
 
+administrator.user-account.error.empty = El nombre no puede estar vacío
+
 administrator.user-account.list.label.username = Apodo
 administrator.user-account.list.label.name = Nombre
 administrator.user-account.list.label.surname = Apellidos

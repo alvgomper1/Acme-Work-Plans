@@ -14,13 +14,15 @@ public class ManagerUpdateTaskTests extends AcmePlannerTest {
 
 	/**
 	 * La feature que prueba este test es actualizar tareas siendo un usuario manager
+	 * El test comprueba que se pueden actualizar cada uno de los campos en una multitud de tasks 
+	 * sin que estos tengan ningún fallo.
 	 * <p>
 	 * Este metodo accede al menu desplegable de manager y entra al listado
 	 * 'List tasks'. Debe comprobar que al actualizar los datos por otros de un fichero csv,
 	 * se actualizan correctamente y sin fallos, comprobando todos los valores.
 	 */
 
-//	@ParameterizedTest
+	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/update-positive.csv", encoding = "UTF-8", numLinesToSkip = 1)
 	@Order(10)
 	public void managerUpdateTaskPositive(final int recordIndex, final String title, final String start_date_time, final String end_date_time, final String workload, final String description, final String optional_link, final String visibility,
@@ -64,14 +66,17 @@ public class ManagerUpdateTaskTests extends AcmePlannerTest {
 
 	/**
 	 * La feature que prueba este test es actualizar tareas siendo un usuario manager,
-	 * pero en este caso buscamos que falle
+	 * pero en este caso buscamos que falle. Para esto probamos a dejar un campo vacío 
+	 * en cada una de las entradas del csv, probamos todas las formas de introducir 
+	 * incorrectamente workload, probamos que las fechas no sean pasadas o que la fecha de 
+	 * inicio sea despues de la fecha de fin y que el email tiene el formato correcto.
 	 * <p>
 	 * Este metodo accede al menu desplegable de manager y entra al listado
 	 * 'List tasks'. Debe comprobar que al intentar actualizar la página devuelve error
 	 * por los datos que se le están pasando.
 	 */
 
-	//	@ParameterizedTest
+	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/update-negative.csv", encoding = "UTF-8", numLinesToSkip = 1)
 	@Order(20)
 	public void managerUpdateTaskNegative(final int recordIndex, final String title, final String start_date_time, final String end_date_time, final String workload, final String description, final String optional_link, final String visibility,
@@ -107,7 +112,8 @@ public class ManagerUpdateTaskTests extends AcmePlannerTest {
 	
 	/**
 	 * La feature que prueba este test es actualizar tareas siendo un usuario manager,
-	 * pero en este caso buscamos que falle por parte del módulo de spam.
+	 * la idea tras este test es que poniendo escenarios en lo que casi falla no se
+	 * devuelve ningún fallo.
 	 * <p>
 	 * Este metodo accede al menu desplegable de manager y entra al listado
 	 * 'List tasks'. Debe comprobar que al intentar actualizar la página devuelve error
@@ -156,7 +162,8 @@ public class ManagerUpdateTaskTests extends AcmePlannerTest {
 	
 	/**
 	 * La feature que prueba este test es actualizar tareas siendo un usuario manager,
-	 * pero en este caso buscamos que falle por parte del módulo de spam.
+	 * pero en este caso buscamos que falle por parte del módulo de spam. Esto se hace
+	 * poniendo una cantidad de palabras de spam sufiente en cada uno de los campos.
 	 * <p>
 	 * Este metodo accede al menu desplegable de manager y entra al listado
 	 * 'List tasks'. Debe comprobar que al intentar actualizar la página devuelve error

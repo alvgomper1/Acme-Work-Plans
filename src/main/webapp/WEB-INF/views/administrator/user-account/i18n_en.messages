@@ -27,3 +27,5 @@ administrator.user-account.list.title = Listing of user accounts
 administrator.user-account.list.label.username = Username
 administrator.user-account.list.label.name = Name
 administrator.user-account.list.label.surname = Surname
+
+administrator.user-account.error.empty = Name can not be empty
