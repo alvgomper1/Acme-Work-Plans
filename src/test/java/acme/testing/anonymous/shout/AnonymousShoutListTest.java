@@ -48,7 +48,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/anonymous/shout/list-recent-shouts-june.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
 	public void anonymousShoutListPositiveJune(final int recordIndex,final String moment,final String author,final String text) {		
-		if (LocalDate.now().isBefore(LocalDate.of(2021, 6, 30))&& LocalDate.now().isAfter(LocalDate.of(2021, 5, 31))) {
+		if (LocalDate.now().isBefore(LocalDate.of(2021, 6, 30))&& LocalDate.now().isAfter(LocalDate.of(2021, 4, 30))) {
 		
 		super.clickOnMenu("Anonymous", "List of shouts");
 		
