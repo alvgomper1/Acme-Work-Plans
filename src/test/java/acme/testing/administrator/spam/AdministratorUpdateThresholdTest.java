@@ -49,7 +49,8 @@ public class AdministratorUpdateThresholdTest extends AcmePlannerTest {
 
 	/**
 	 * La feature que prueba este test es la de actualizar el treshold como administrador, esta vez, el caso negativo
-	 * <p>
+	 *  en el que se introducen valores de trehold incorrectos, es decir, valores nulos, negativos, mayores a 100, con letras y
+	 *  con mas decimales de la ceunta<p>
 	 * Una vez iniciada sesion como administrador, se accede a su menu desplegable y se entra
 	 * al modulo de spam, donde se establece el nuevo valor que se le quiere probar. Se van a probar una serie de valores
 	 * que no pueden ponerse como valor del treshold debido a una restriccion de los requisitos. Se envia con el boton de
