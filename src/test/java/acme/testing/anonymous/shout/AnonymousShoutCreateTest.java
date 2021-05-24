@@ -38,6 +38,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 		
 		super.clickOnMenu("Anonymous", "List of shouts");
 		
+		//Cuando se crea un nuevo shout, aparece siempre en la primera fila
 		super.checkColumnHasValue(0, 0, date);
 		super.checkColumnHasValue(0, 1, author);
 		super.checkColumnHasValue(0, 2, text);
