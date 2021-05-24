@@ -1,6 +1,7 @@
 package acme.testing.anonymous.shout;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -12,6 +13,16 @@ import acme.testing.AcmePlannerTest;
 public class AnonymousShoutCreateTest extends AcmePlannerTest{
 
 	
+	
+	// Lifecycle management ---------------------------------------------------
+	
+	
+	@BeforeAll
+	public void clearShouts() {
+		super.clearDataBase();
+		
+	}
+	//Test cases --------------------------------------------------------------
 	/**
 	 * La feature que prueba este test es la de crear un shout sin spam ni campos vacios
 	 * <p>
