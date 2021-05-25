@@ -17,7 +17,12 @@ GitHub Repository: https://github.com/alvgomper1/Acme-Planner.git
 
 -NOS PRESENTAMOS AL NIVEL B
 
--PARA QUE APAREZCA BIEN EL COVERAGE DE LOS TESTS ES NECESARIO, UNA VEZ TERMINEN LOS TESTS DE EJECUTARSE, REALIZAR LO SIGUIENTE:
+-ANTES DE EJECUTAR LOS TESTS ES NECESARIO:
+	-Configurar el launcher de Acme-Planner (Test) en tu Eclipse para que ejecute todos los tests en el directorio src/test/java:
+		- Click derecho en la carpeta del proyecto en Eclipse ---> Propiedades ---> Run/Debug settings --> Seleccionas Acme-Planner(Test) y le das a editar -->
+		---> Dentro de "Run all tests in the selected projects package or source folder..." ponemos el directorio "src/test/java"
+
+- UNA VEZ TERMINEN LOS TESTS DE EJECUTARSE,PARA QUE APAREZCA BIEN EL COVERAGE DE LOS TESTS ES NECESARIO REALIZAR LO SIGUIENTE:
 	- Iniciar sesión como adminsitrador (user=administrator pass=administrator)
 	- Ir al menú del administrador y pulsar "Shut Down"
 	- Tras realizar esto, el coverage debe aparecer correctamente en Eclipse. Superamos el 60% de cobertura en todas las features
