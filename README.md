@@ -37,7 +37,7 @@ cuando se encuentra escrita en ese orden, sin embargo, por ejemplo "million ligh
 - Para que funcione el módulo de spam, es necesario hacer un populate initial, para cargar el módulo. De otra forma al acceder al módulo de spam, pues dará error, porque no lo podrá encontrar en la base de datos. Para cargar las palabras de spam, hacer un populate-sample.
 
 
-Url del proyecto en CleverCloud: https://app-e191e417-5ce1-4441-b82f-800ab252275a.cleverapps.io/Acme-Planner
+Url del proyecto en CleverCloud: https://app-97baeb30-90ef-49e6-8e97-1a2ceb8d961f.cleverapps.io/Acme-Planner
 PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
 
 
