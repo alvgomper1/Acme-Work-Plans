@@ -14,7 +14,6 @@ Ingeniería Informática del Software de la Universidad de Sevilla. Para este pr
 que trabajar con un framework especial proporcionado por los profesores de la asignatura.
 
 GitHub Repository: https://github.com/alvgomper1/Acme-Planner.git
-GitHub Release: https://github.com/felconmar/Acme-Planner/releases/tag/1.0.1
 
 -NOS PRESENTAMOS AL NIVEL B
 
