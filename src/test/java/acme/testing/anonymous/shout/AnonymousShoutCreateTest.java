@@ -23,9 +23,9 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 	}
 	
 	/**
-	 * La feature que realiza este test es la de inicializar la base de datos con palabras de spam
+	 * El siguiente método simplemente es necesario para que funcionen los demás, no es un test como tal. 
 	 * <p>
-	 * Para ello accedemos como administrador y creamos las palabras de spam para poder realizar los siguientes test
+	 * Accedemos como administrador y creamos las palabras de spam para poder realizar los siguientes test
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/spam/populate-spam-words.csv", encoding = "utf-8", numLinesToSkip = 1)
