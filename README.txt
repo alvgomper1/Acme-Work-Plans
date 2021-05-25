@@ -15,6 +15,8 @@ que trabajar con un framework especial proporcionado por los profesores de la as
 
 GitHub Repository: https://github.com/alvgomper1/Acme-Planner.git
 
+- EL PUERTO  ES EL 8090 por diversos conflictos
+
 -NOS PRESENTAMOS AL NIVEL B
 
 -ANTES DE EJECUTAR LOS TESTS ES NECESARIO:
