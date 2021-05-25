@@ -5,7 +5,10 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class UtilComponent {
-
+	
+	private UtilComponent() {
+		
+	}
 	public static Date addFecha(final Date fechaBase, final int tipoFecha, final int cantidadSumar ) { //Permite sumarle dias, horas o cualquier unidad de tiempo a otra fecha y te devuelve un Date del resultado
 		   final Calendar calendar = Calendar.getInstance();
 		      calendar.setTime(fechaBase); 
@@ -23,9 +26,9 @@ public class UtilComponent {
 	
 		final String[] fechaHora=dateEnglish.split(" ");
 		final String[] fecha=fechaHora[0].split("/");
-		 final String result=fecha[2]+"/"+fecha[1]+"/"+fecha[0]+ " " + fechaHora[1] ;
+		return fecha[2]+"/"+fecha[1]+"/"+fecha[0]+ " " + fechaHora[1] ;
 		
-		return result;
+
 		
 	}
 }
