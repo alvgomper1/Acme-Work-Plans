@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
+import acme.components.UtilComponent;
 import acme.testing.AcmePlannerTest;
 
 public class ManagerListTaskTest extends AcmePlannerTest {
@@ -16,7 +17,8 @@ public class ManagerListTaskTest extends AcmePlannerTest {
 	 * Este metodo accede al menu desplegable de manager y entra al listado
 	 * 'List tasks'. Debe comprobar que el listado se muestra y no está vacio, para ello,
 	 * se comprueba que en la tabla existen los valores correctos, comrobandolo con el archivo 'list-task-positive.csv'
-	 * Ademas, comprueba que al clickar en una tarea determinado se muestran todos los datos correctamente
+	 * Ademas, comprueba que al clickar en una tarea determinado se muestran todos los datos correctamente. También se comprobará que al
+	 * cambiar la página a español el formato de las fechas se convierta en "día/mes/año horas:minutos"
 	 */  
 	
 	@ParameterizedTest
@@ -49,6 +51,11 @@ public class ManagerListTaskTest extends AcmePlannerTest {
 		if (finished == "true") super.checkInputBoxHasValue("finished", "Finished");
 		if (finished == "false") super.checkInputBoxHasValue("finished", "Not finished");
 		super.checkInputBoxHasValue("executionPeriod", executionPeriod);
+		
+		super.clickAndGo(By.xpath("/html/body/footer/div/div[3]/ul/li[2]/a")); //Spanish button
+		super.clickOnMenu("Gerente", "Lista de tareas");
+		super.checkColumnHasValue(recordIndex, 1, UtilComponent.formatDateStringToSpanish(startDate));
+		super.checkColumnHasValue(recordIndex, 2, UtilComponent.formatDateStringToSpanish(endDate));
 		
 		super.signOut();
 	}

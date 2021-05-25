@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
+import acme.components.UtilComponent;
 import acme.testing.AcmePlannerTest;
 
 public class ManagerShowTaskTest extends AcmePlannerTest {
@@ -14,7 +15,8 @@ public class ManagerShowTaskTest extends AcmePlannerTest {
 	 * La feature que prueba este test es la de mostrar tareas siendo un usuario manager
 	 * <p>
 	 * Este metodo accede al menu desplegable de manager y entra al listado
-	 * 'List tasks'. Debe comprobar que al clickar en una tarea determinado se muestran todos los datos correctamente
+	 * 'List tasks'. Debe comprobar que al clickar en una tarea determinado se muestran todos los datos correctamente. También comprobar que 
+	 * al cambiar la página al español, las fechas de la task cambia al formato "dia/mes/año horas:minutos"
 	 */  
 	
 	@ParameterizedTest
@@ -40,6 +42,13 @@ public class ManagerShowTaskTest extends AcmePlannerTest {
 		if (finished == "true") super.checkInputBoxHasValue("finished", "Finished");
 		if (finished == "false") super.checkInputBoxHasValue("finished", "Not finished");
 		super.checkInputBoxHasValue("executionPeriod", executionPeriod);
+		
+		super.clickAndGo(By.xpath("/html/body/footer/div/div[3]/ul/li[2]/a")); //Spanish button
+		super.clickOnMenu("Gerente", "Lista de tareas");
+		
+		super.clickOnListingRecord(recordIndex);
+		super.checkInputBoxHasValue("startDate", UtilComponent.formatDateStringToSpanish(startDate));
+		super.checkInputBoxHasValue("endDate", UtilComponent.formatDateStringToSpanish(endDate));
 		
 		super.signOut();
 	}

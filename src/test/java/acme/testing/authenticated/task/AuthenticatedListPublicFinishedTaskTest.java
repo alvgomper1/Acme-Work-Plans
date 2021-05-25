@@ -43,8 +43,10 @@ public class AuthenticatedListPublicFinishedTaskTest extends AcmePlannerTest{
 	}
 	
 	/**
-	 * La feature que prueba este test es la de mostrar los detalles de tareas publicas finalizadas para principal authenticated
+	 * La feature que prueba este test es la de mostrar los detalles de tareas publicas finalizadas para principal authenticated.
 	 * <p>
+	 * Se quiere comprobar que al cambiar de idioma hacia el español, el formato de las fechas cambia a "día/mes/año horas:minutos"
+	 * , coincidiendo con el CVS
 	 * Para ello, iniciamos sesion y accedemos al listado.
 	 * Cuando estamos en el listado pulsamos en una task y comprobamos que los 
 	 * atributos de cada task coinciden con las 5 primeras del csv

@@ -18,4 +18,14 @@ public class UtilComponent {
 		final Date date = new Date(System.currentTimeMillis());
 		return formatter.format(date);
 	}
+	
+	public static String formatDateStringToSpanish(final String dateEnglish) {
+	
+		final String[] fechaHora=dateEnglish.split(" ");
+		final String[] fecha=fechaHora[0].split("/");
+		 final String result=fecha[2]+"/"+fecha[1]+"/"+fecha[0]+ " " + fechaHora[1] ;
+		
+		return result;
+		
+	}
 }
