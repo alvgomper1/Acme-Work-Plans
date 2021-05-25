@@ -1,12 +1,10 @@
-# README.txt
-#
 # Copyright (C) 2012-2021 Rafael Corchuelo.
 #
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
+In keeping with the traditional purpose of furthering education and research, it is
+the policy of the copyright owner to permit non-commercial use and redistribution of
+this software. It has been tested carefully, but it is not guaranteed for any particular
+purposes.  The copyright owner does not offer any warranties or representations, nor do
+they accept any liabilities with respect to them.
 
 
 Este es el proyecto Acme-Planner D3, correspondiente a los alumnos del grupo 30 de DP2 de 
