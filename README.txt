@@ -14,11 +14,15 @@ Ingeniería Informática del Software de la Universidad de Sevilla. Para este pr
 que trabajar con un framework especial proporcionado por los profesores de la asignatura.
 
 GitHub Repository: https://github.com/alvgomper1/Acme-Planner.git
-GitHub Release: https://github.com/felconmar/Acme-Planner/releases/tag/1.0.1
 
 -NOS PRESENTAMOS AL NIVEL B
 
--PARA QUE APAREZCA BIEN EL COVERAGE DE LOS TESTS ES NECESARIO, UNA VEZ TERMINEN LOS TESTS DE EJECUTARSE, REALIZAR LO SIGUIENTE:
+-ANTES DE EJECUTAR LOS TESTS ES NECESARIO:
+	-Configurar el launcher de Acme-Planner (Test) en tu Eclipse para que ejecute todos los tests en el directorio src/test/java:
+		- Click derecho en la carpeta del proyecto en Eclipse ---> Propiedades ---> Run/Debug settings --> Seleccionas Acme-Planner(Test) y le das a editar -->
+		---> Dentro de "Run all tests in the selected projects package or source folder..." ponemos el directorio "src/test/java"
+
+- UNA VEZ TERMINEN LOS TESTS DE EJECUTARSE,PARA QUE APAREZCA BIEN EL COVERAGE DE LOS TESTS ES NECESARIO REALIZAR LO SIGUIENTE:
 	- Iniciar sesión como adminsitrador (user=administrator pass=administrator)
 	- Ir al menú del administrador y pulsar "Shut Down"
 	- Tras realizar esto, el coverage debe aparecer correctamente en Eclipse. Superamos el 60% de cobertura en todas las features
@@ -31,7 +35,7 @@ cuando se encuentra escrita en ese orden, sin embargo, por ejemplo "million ligh
 - Para que funcione el módulo de spam, es necesario hacer un populate initial, para cargar el módulo. De otra forma al acceder al módulo de spam, pues dará error, porque no lo podrá encontrar en la base de datos. Para cargar las palabras de spam, hacer un populate-sample.
 
 
-Url del proyecto en CleverCloud: http://app-812a79d4-b2d0-42d1-a1a9-069917a7af35.cleverapps.io/Acme-Planner 
+Url del proyecto en CleverCloud: https://app-e191e417-5ce1-4441-b82f-800ab252275a.cleverapps.io/Acme-Planner
 PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
 
 
