@@ -193,67 +193,67 @@
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean>
 	
-	<!-- shouts junio -->
+	<!-- shouts septiembre -->
 	<bean id="shout18" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="moment" value="2021/09/01 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout19" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="moment" value="2021/09/01 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout20" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="moment" value="2021/09/01 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout21" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="moment" value="2021/09/01 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout22" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="moment" value="2021/09/01 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout23" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/06/30 00:00"/>
+		<property name="moment" value="2021/09/01 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean>
 	
-	<!-- shouts julio -->
+	<!-- shouts agosto -->
 	<bean id="shout24" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="moment" value="2021/08/30 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout25" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="moment" value="2021/08/30 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout26" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="moment" value="2021/08/30 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout27" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="moment" value="2021/08/30 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout28" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="moment" value="2021/08/30 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
 	</bean><bean id="shout29" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/07/30 00:00"/>
+		<property name="moment" value="2021/08/30 00:00"/>
 		<property name="author" value="Manolo"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
@@ -265,8 +265,8 @@
 
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 1" />
-		<property name="startDate" value="2021/07/08 00:00" />
-		<property name="endDate" value="2021/07/10 00:00" />
+		<property name="startDate" value="2021/09/08 00:00" />
+		<property name="endDate" value="2021/09/10 00:00" />
 		<property name="workload" value="0.2" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
@@ -311,8 +311,8 @@
 
 	<bean id="task04" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 4" />
-		<property name="startDate" value="2021/01/02 00:00" />
-		<property name="endDate" value="2021/01/09 00:00" />
+		<property name="startDate" value="2021/07/02 00:00" />
+		<property name="endDate" value="2021/07/09 00:00" />
 		<property name="workload" value="20.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
