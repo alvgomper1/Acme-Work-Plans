@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.SpamComponent;
+import acme.components.UtilComponent;
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.entities.words.Word;
@@ -88,19 +89,22 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		if (!errors.hasErrors("title")) {
             errors.state(request,!SpamComponent.containSpam(entity.getTitle(),spamWords,threshold) , "title", "manager.task.form.title.error.spam");
         }
-     if (!errors.hasErrors("description")) {
+		if (!errors.hasErrors("description")) {
             errors.state(request,!SpamComponent.containSpam(entity.getDescription(),spamWords,threshold) , "description", "manager.task.form.description.error.spam");
         }
-     if (!errors.hasErrors("optionalLink")) {
+		if (!errors.hasErrors("optionalLink")) {
             errors.state(request,!SpamComponent.containSpam(entity.getOptionalLink(),spamWords,threshold) , "optionalLink", "manager.task.form.optionalLink.error.spam");
         }
-     
-     if (!errors.hasErrors("endDate")) {
-         errors.state(request,entity.getStartDate().before(entity.getEndDate()) , "endDate", "manager.task.form.endDate.error");
-     }
-     if (!errors.hasErrors("workload")) {
-         errors.state(request,entity.getWorkload()<=entity.calculateExecutionPeriod() , "workload", "manager.task.form.workload.error");
-     }
+		if (!errors.hasErrors("endDate")) {
+			errors.state(request,entity.getStartDate().before(entity.getEndDate()) , "endDate", "manager.task.form.endDate.error");
+		}
+		if (!errors.hasErrors("workload")) {
+	    	 final Double minutes= UtilComponent.getMinutesFromWorkload(entity.getWorkload());
+	            errors.state(request,minutes <= 59.00 , "workload", "manager.task.form.workload.error.max59");
+	            final Double workloadInHours= UtilComponent.workloadToHoursFormat(entity.getWorkload());
+	            errors.state(request,workloadInHours<=entity.calculateExecutionPeriod() , "workload", "manager.task.form.workload.error");
+	     	}
+		
      
 	}
 
@@ -109,7 +113,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		
-		final Long executionPeriod= entity.calculateExecutionPeriod();
+		final Double executionPeriod= entity.calculateExecutionPeriod(); //Time between start and finish
         entity.setExecutionPeriod(executionPeriod);
 
 		this.repository.save(entity);

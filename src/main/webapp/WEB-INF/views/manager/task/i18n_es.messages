@@ -1,7 +1,7 @@
 manager.task.list.label.title = Titulo
 manager.task.list.label.startDate = Fecha de comienzo
 manager.task.list.label.endDate = Fecha de fin
-manager.task.list.label.workload = Carga de trabajo (Horas)
+manager.task.list.label.workload = Carga de trabajo ("Horas.minutos")
 manager.task.list.label.description = Descripcion
 manager.task.list.label.optionalLink = Enlace opcional
 manager.task.list.label.executionPeriod = Periodo de ejecucion (Horas)
@@ -35,3 +35,4 @@ manager.task.form.endDate.error= La fecha de fin no puede ser anterior a la de i
 manager.task.form.startDate.error= La fecha de inicio no puede estar en pasado
 manager.task.form.endDatePast.error= La fecha de fin no puede estar en pasado
 manager.task.form.workload.error= La carga de trabajo no puede ser mayor al periodo de ejecucion
+manager.task.form.workload.error.max59 = La fracción de minutos de la carga de trabajo no pueden ser mayores a 59.00

@@ -18,10 +18,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	
-	<name>Acme-Planner</name>
+	<name>Acme-Work-Plans</name>
 	<description>This is the Starter Project for the students of Design &amp; Testing.</description>
 
-	<artifactId>Acme-Planner</artifactId>
+	<artifactId>Acme-Work-Plans</artifactId>
 	<version>21.4</version>
 	<packaging>war</packaging>
 

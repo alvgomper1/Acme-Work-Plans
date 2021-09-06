@@ -82,7 +82,8 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			result.setDescription("This is the oldest announcement in the system.");
 			result.setOptionalLink("http://www.sample-app.com");
 			result.setVisibility(Visibility.PUBLIC);
-			result.setExecutionPeriod(12l);
+			
+			result.setExecutionPeriod(2.0);
 			result.setFinished(true);
 			
 			final Manager manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
@@ -117,16 +118,17 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	        }
 	     if (!errors.hasErrors("endDate")) {
 	            errors.state(request,entity.getEndDate().compareTo(today)>0 , "endDate", "manager.task.form.endDatePast.error");
-	        }
-	     if (!errors.hasErrors("endDate")) {
 	            errors.state(request,entity.getStartDate().before(entity.getEndDate()) , "endDate", "manager.task.form.endDate.error");
 	        }
+	   
 	     
 	     if (!errors.hasErrors("workload")) {
-	            errors.state(request,entity.getWorkload()<=entity.calculateExecutionPeriod() , "workload", "manager.task.form.workload.error");
-	        }
-	     
-	     
+	    	 final Double minutes= UtilComponent.getMinutesFromWorkload(entity.getWorkload());
+	            errors.state(request,minutes <= 59.00 , "workload", "manager.task.form.workload.error.max59");
+	            final Double workloadInHours= UtilComponent.workloadToHoursFormat(entity.getWorkload());
+	            errors.state(request,workloadInHours<=entity.calculateExecutionPeriod() , "workload", "manager.task.form.workload.error");
+	     	}
+	   
 	     
 		}
 
@@ -140,6 +142,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			
 			final Boolean finished = false;
 			entity.setFinished(finished);
+			
+			final Double executionPeriod= entity.calculateExecutionPeriod(); //Time between start and finish
+	        entity.setExecutionPeriod(executionPeriod);
+
 
 			this.repository.save(entity);
 		}

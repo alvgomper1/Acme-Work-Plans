@@ -24,7 +24,7 @@
     </appender>
     
     <appender name="File" class="ch.qos.logback.core.FileAppender">
-    	<file>acme-planner.log</file>
+    	<file>Acme-Work-Plans.log</file>
     	<append>true</append>
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
     		<layout class="acme.framework.utilities.LogbackCustomLayout" />

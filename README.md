@@ -7,36 +7,23 @@ purposes.  The copyright owner does not offer any warranties or representations,
 they accept any liabilities with respect to them.
 
 
-Este es el proyecto Acme-Planner D3, correspondiente a los alumnos del grupo 30 de DP2 de 
+Este es el proyecto Acme-Planner D2, correspondiente a los alumnos del grupo 30 de DP2 de 
 Ingeniería Informática del Software de la Universidad de Sevilla. Para este proyecto había 
 que trabajar con un framework especial proporcionado por los profesores de la asignatura.
 
-GitHub Repository: https://github.com/alvgomper1/Acme-Planner.git
+GitHub Repository: https://github.com/felconmar/Acme-Work-Plans.git
 
 - EL PUERTO  ES EL 8090 por diversos conflictos
 
 -NOS PRESENTAMOS AL NIVEL B
+- Hemos partido del proyecto desarrollado durante el curso, cambiando algunos detalles de los nuevos requisitos, así como el nombre a "Acme-Work-Plans" (junto con los launchers de la base de datos). El compañero "Manuel García Marchena" aprobó la asignatura en la convocatoria de Junio, pero lo seguimos mencionando en los diferentes reportes del entregable, puesto que fue, junto con nosotros, autor del proyecto.
 
--ANTES DE EJECUTAR LOS TESTS ES NECESARIO:
-	-Configurar el launcher de Acme-Planner (Test) en tu Eclipse para que ejecute todos los tests en el directorio src/test/java:
-		- Click derecho en la carpeta del proyecto en Eclipse ---> Propiedades ---> Run/Debug settings --> Seleccionas Acme-Planner(Test) y le das a editar -->
-		---> Dentro de "Run all tests in the selected projects package or source folder..." ponemos el directorio "src/test/java"
+- IMPORTANTE LEER NUESTRA INTERPRETACIÓN DEL MÓDULO DE SPAM (Apartado 2 del reporte "Features Model").
+- El atributo "workload" tiene el significado "horas.minutos". Es decir, 1.5 representa "1 hora y 50 minutos".
+- Para satisfacer el requisito de "executionPeriod", hemos creado 2 fechas, una de inicio y otra de fin para las Tasks. No obstante, hemos creado además un nuevo atributo "executionPeriod" que indica la duración en horas entre la fecha de inicio y el fin de la tarea (En este caso, 1.5= 1 hora y 30 minutos) Se usará para saber si un workload entra dentro de la duración de una task. 
 
-- UNA VEZ TERMINEN LOS TESTS DE EJECUTARSE,PARA QUE APAREZCA BIEN EL COVERAGE DE LOS TESTS ES NECESARIO REALIZAR LO SIGUIENTE:
-	- Iniciar sesión como adminsitrador (user=administrator pass=administrator)
-	- Ir al menú del administrador y pulsar "Shut Down"
-	- Tras realizar esto, el coverage debe aparecer correctamente en Eclipse. Superamos el 60% de cobertura en todas las features
-
-INTERPRETACIÓN DEL MÓDULO DE SPAM (Importante leerlo)
--Consideraremos que una cadena contiene spam cuando el porcentaje de palabras de spam con respecto al total de ese texto (número de palabras spam / total de palabras) supere
-el umbral establecido. Por ejemplo, el texto "viagra mesa azul" tiene un porcentaje de spam del 33.33%. Si el umbral fuera de 10%, lo detectaría como spam.
-- Hemos implementado el spam de tal forma que pueda detectar palabras con espacios incluidos, por ejemplo, la palabra "million dollar" cuenta como una única palabra de spam
-cuando se encuentra escrita en ese orden, sin embargo, por ejemplo "million lights dollar", no se considera spam. Las palabras compuestas registradas como spam cuentan como una única palabra, por ejemplo "million dollar mesa", tendría un porcentaje de spam del 50%, porque "million dollar" se considera una única palabra, puesto que solo provoca spam cuando va en ese orden.
-- Para que funcione el módulo de spam, es necesario hacer un populate initial, para cargar el módulo. De otra forma al acceder al módulo de spam, pues dará error, porque no lo podrá encontrar en la base de datos. Para cargar las palabras de spam, hacer un populate-sample.
-
-
-Url del proyecto en CleverCloud: https://app-97baeb30-90ef-49e6-8e97-1a2ceb8d961f.cleverapps.io/Acme-Planner
-PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
+Url del proyecto en CleverCloud: https://app-97baeb30-90ef-49e6-8e97-1a2ceb8d961f.cleverapps.io/Acme-Work-Plans
+PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Work-Plans/"
 
 
 USUARIOS PARA NAVEGAR POR LA PÁGINA

@@ -16,7 +16,7 @@ public abstract class AcmePlannerTest extends AcmeTest {
 	  super.setHeadless(true);
 		super.beforeAll();
 
-		super.setBaseCamp("http", "localhost", "8090", "/Acme-Planner", "/master/welcome", "?language=en&debug=true");
+		super.setBaseCamp("http", "localhost", "8090", "/Acme-Work-Plans", "/master/welcome", "?language=en&debug=true");
 		super.setAutoPausing(false);
 		
 		this.navigateHome();
