@@ -30,7 +30,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	public void anonymousShoutListNegative() {
 
 		super.signIn("administrator", "administrator");
- 		super.driver.get("http://localhost:8090/Acme-Planner/anonymous/shout/list");
+ 		super.driver.get("http://localhost:8090/Acme-Work-Plans/anonymous/shout/list");
  		this.checkPanicExists();
 		this.signOut();
 

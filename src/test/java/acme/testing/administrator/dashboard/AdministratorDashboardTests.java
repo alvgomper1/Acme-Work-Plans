@@ -57,7 +57,7 @@ public class AdministratorDashboardTests extends AcmePlannerTest {
 		super.navigateHome();
 		super.signIn("manager1", "manager1");
 
-		super.driver.get("http://localhost:8090/Acme-Planner/administrator/dashboard/show");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/administrator/dashboard/show");
 		super.checkPanicExists();
 		
 		super.signOut();
@@ -78,7 +78,7 @@ public class AdministratorDashboardTests extends AcmePlannerTest {
 
 		super.navigateHome();
 
-		super.driver.get("http://localhost:8090/Acme-Planner/administrator/dashboard/show");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/administrator/dashboard/show");
 		super.checkPanicExists();
 		
 	}

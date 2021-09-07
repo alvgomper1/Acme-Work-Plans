@@ -86,7 +86,7 @@ public class AuthenticatedListPublicFinishedTaskTest extends AcmePlannerTest{
 	@Test
 	public void listTaskNegative() {
 		super.navigateHome();		
-		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/list");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/manager/task/list");
 		this.checkPanicExists();
 	}
 	

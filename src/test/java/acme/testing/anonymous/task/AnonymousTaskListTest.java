@@ -17,7 +17,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest {
 	public void beforeAll() {
 		super.beforeAll();
 
-		super.setBaseCamp("http", "localhost", "8090", "/Acme-Planner", "/master/welcome", "?language=en&debug=true");
+		super.setBaseCamp("http", "localhost", "8090", "/Acme-Work-Plans", "/master/welcome", "?language=en&debug=true");
 		super.setAutoPausing(false);
 
 	}
@@ -81,7 +81,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest {
 	public void listTasksAnonymousNegative() {
 
 		super.signIn("administrator", "administrator");
- 		super.driver.get("http://localhost:8090/Acme-Planner/anonymous/task/list");
+ 		super.driver.get("http://localhost:8090/Acme-Work-Plans/anonymous/task/list");
 	 	this.checkPanicExists();
 		this.signOut();
 
