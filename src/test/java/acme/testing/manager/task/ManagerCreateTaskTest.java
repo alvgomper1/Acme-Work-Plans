@@ -34,6 +34,7 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 		super.fillInputBoxIn("title", title );
 		super.fillInputBoxIn("visibility", visibility);		
 		super.fillInputBoxIn("workload", workload );
+	
 		
 		super.clickOnSubmitButton("Create");
 		Assertions.assertFalse(super.exists(By.className("text-danger")));
@@ -47,10 +48,8 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("workload", workload);
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("optionalLink", optional_link);
-		if (visibility.equals("PUBLIC"))
-			super.checkInputBoxHasValue("visibility", "Public");
-		if (visibility.equals("PRIVATE"))
-			super.checkInputBoxHasValue("visibility", "Private");
+		if (visibility == "PUBLIC") super.checkInputBoxHasValue("visibility", "Public");
+		if (visibility == "PRIVATE") super.checkInputBoxHasValue("visibility", "Private");
 
 		super.signOut();
 	}
@@ -81,6 +80,7 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 		super.fillInputBoxIn("visibility", visibility);		
 		super.fillInputBoxIn("workload", workload );
 		
+		
 		super.clickOnSubmitButton("Create");
 		super.checkErrorsExist();
 		
@@ -110,6 +110,7 @@ public class ManagerCreateTaskTest extends AcmePlannerTest{
 		super.fillInputBoxIn("title", title );
 		super.fillInputBoxIn("visibility", visibility);		
 		super.fillInputBoxIn("workload", workload );
+		
 		
 		super.clickOnSubmitButton("Create");
 		super.checkErrorsExist();

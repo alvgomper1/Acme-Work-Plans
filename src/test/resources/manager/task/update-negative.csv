@@ -1,10 +1,16 @@
 recordIndex,title,start_date_time,end_date_time,workload,description,optional_link,visibility,finished
-0,,2021/07/09 00:00,2021/07/11 00:00,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
-0,Example updated task 1,,2021/07/11 00:00,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
-0,Example updated task 1,2021/07/09 00:00,,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
+0,,2021/07/09 00:00,2021/07/11 00:00,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Not Finished
+0,Example updated task 1,,2021/07/11 00:00,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Not Finished
+0,Example updated task,2021/07/09 00:00,2021/07/09 1:00,0.70,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Private,Finished
+0,Example updated task,2021/07/09 00:00,2021/07/09 1:00,100.70,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Private,Finished
+0,Example updated task,2021/07/09 00:00,2021/07/09 1:00,99.70,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Private,Not Finished
+0,Example updated task,2021/07/09 00:00,2020/07/09 00:00,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
+0,Example updated task,2021/07/09 00:00,,1.20,This is a text with +500 characters aaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,http://www.sample-updated-app.com,Public,Finished
 0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
-0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,1.20,,http://www.sample-updated-app.com,Public,Finished
 0,Example updated task 1,2021/07/11 00:00,2021/07/09 00:00,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
 0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,100000000.00,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
-0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,-1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
+0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,-1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Not Finished
 0,Example updated task 1,2021/07/09 00:00,2021/07/11 00:00,-1.20,This is the oldest updated announcement in the system.,sample-updated-app,Public,Finished
+0,Example updated task,2021/07/09 00:00,,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Private,Finished
+0,Example updated task,2021/07/09 00:00,2021/07/09 1:00,1.20,This is the oldest updated announcement in the system.,http://www.sample-updated-app.com,Public,Finished
+0,Example updated task,2020/07/09 00:00,2021/07/09 1:00,0.3,This is a text with +500 characters aaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,http://www.sample-updated-app.com,Public,Finished

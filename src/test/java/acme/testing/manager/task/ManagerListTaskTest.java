@@ -72,7 +72,7 @@ public class ManagerListTaskTest extends AcmePlannerTest {
 
 		super.navigateHome();
 		assert !super.exists(By.linkText("Manager"));
-		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/list");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/manager/task/list");
 		this.checkPanicExists();
 		}
 }
