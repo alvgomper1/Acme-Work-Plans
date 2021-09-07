@@ -27,6 +27,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	 */
 
 	@Test
+	@Order(10)
 	public void anonymousShoutListNegative() {
 
 		super.signIn("administrator", "administrator");
@@ -48,11 +49,11 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	 *  de la siguiente forma "día/mes/año horas:minutos"
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/shout/list-recent-shouts-july.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/anonymous/shout/list-recent-shouts-september.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(30)
 	public void anonymousShoutListPositiveSeptember(final int recordIndex,final String moment,final String author,final String text) {		
 	 
-		if (LocalDate.now().isBefore(LocalDate.of(2021, 9, 30)) && LocalDate.now().isAfter(LocalDate.of(2021, 8, 29))) {
+		if (LocalDate.now().isBefore(LocalDate.of(2021, 10, 2)) && LocalDate.now().isAfter(LocalDate.of(2021, 8, 30))) {
 		super.clickOnMenu("Anonymous", "List of shouts");
 		
 		super.checkColumnHasValue(recordIndex, 0, moment);
