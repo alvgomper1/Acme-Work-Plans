@@ -1,6 +1,7 @@
-recordIndex,endDate,executionPeriod,finished,optionalLink,startDate,title,visibility,workload,description
-0,04/01/2021 00:00,"72,00",true,http://www.sample-app.com,01/01/2021 00:00,Example task 2,PUBLIC,"1,20",This is the oldest announcement in the system.
-1,11/08/2021 00:00,"48,00",true,http://www.sample-app.com,09/08/2021 00:00,Example task 3,PUBLIC,"3,00",This is the oldest announcement in the system.
-2,22/01/2021 00:00,"336,00",true,http://www.sample-app.com,08/01/2021 00:00,Example task 5,PUBLIC,"5,00",This is the oldest announcement in the system.
-3,22/02/2021 00:00,"432,00",true,http://www.sample-app.com,04/02/2021 00:00,Example task 6,PUBLIC,"10,00",This is the oldest announcement in the system.
-4,11/01/2021 00:00,"240,00",true,http://www.sample-app.com,01/01/2021 00:00,Example task 12,PUBLIC,"19,00",This is the oldest announcement in the system.
+recordIndex,  endDate,	executionPeriod,	finished,	optionalLink,	startDate,	title,	visibility,	workload,	description
+0	,04/01/2021 00:00,"72,00",true,http://www.sample-app.com,01/01/2021 00:00,	Example task 2,	PUBLIC,	"1,20",	This is the oldest announcement in the system.
+1	,11/08/2021 00:00,"48,00",true,http://www.sample-app.com,09/08/2021 00:00,	Example task 3,	PUBLIC,	"3,00",	This is the oldest announcement in the system.
+2	,22/01/2021 00:00,"336,00",	true,http://www.sample-app.com,	08/01/2021 00:00,	Example task 5,	PUBLIC,	"5,00",	This is the oldest announcement in the system.
+3	,22/02/2021 00:00,"432,00",	true,http://www.sample-app.com,	04/02/2021 00:00,	Example task 6,	PUBLIC,	"10,00",	This is the oldest announcement in the system.
+4	,11/01/2021 00:00,"240,00",	true,http://www.sample-app.com,	01/01/2021 00:00,	Example task 12,	PUBLIC,	"16,00",	This is the oldest announcement in the system.
+5	,09/07/2021 00:00,"168,00",	true,http://www.sample-app.com,	02/07/2021 00:00,	Example task 4,	PUBLIC,	"20,00",	This is the oldest announcement in the system.
