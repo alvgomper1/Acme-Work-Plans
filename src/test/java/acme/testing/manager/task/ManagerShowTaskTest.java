@@ -65,7 +65,7 @@ public class ManagerShowTaskTest extends AcmePlannerTest {
 
 		super.navigateHome();
 		assert !super.exists(By.linkText("Manager"));
-		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/show?id=27");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/manager/task/show?id=27");
 		this.checkPanicExists();	
 	}
 	
@@ -80,7 +80,7 @@ public class ManagerShowTaskTest extends AcmePlannerTest {
 
 		super.navigateHome();
 		this.signIn("manager1", "manager1");
-		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/show?id=67");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/manager/task/show?id=67");
 		this.checkPanicExists();
 		}
 }

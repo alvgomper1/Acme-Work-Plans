@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
 
@@ -27,22 +26,24 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 	 * Tras borrar la task, comprobamos que ya no existe si intentamos acceder a ella mediante url, por lo que nos salta el error
 	 * esperado de que esa task no existe ya.
 	 */
-	@Test
-	public void deleteTaskPositive() {
-
-		super.signIn("manager1", "manager1");
+	@ParameterizedTest
+	@Order(40)
+	@CsvFileSource(resources = "/manager/task/list-task-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void deleteTaskPositive(final int recordIndex, final String title) {
 
 		//Accedemos al listado de task del manager
-		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/list");
+		super.signIn("manager1", "manager1");
+		super.clickOnMenu("Manager", "List tasks");
 		this.setAutoPausing(true);
-		//hacemos click en la 1 tarea del listado
-		super.clickAndGo(By.xpath("//*[@id=\"list\"]/tbody/tr[1]/td[4]"));
+		//hacemos click en la 1a tarea del listado
+		super.clickOnListingRecord(0);
+		super.checkInputBoxHasValue("title", title);
 
 		//Obtenemos la url de la tarea que se va a borrar para despues comprobar que no existe
 		final String urlTaskBorrada = super.driver.getCurrentUrl();
 
 		//Clickamos el boton de borrar tarea
-		super.clickAndGo(By.xpath("//*[@id=\"form\"]/button[2]"));
+		super.clickOnSubmitButton("Delete");
 
 		//Comprobamos que la tarea no existe y se devuelve la vista de error
 		this.driver.get(urlTaskBorrada);
@@ -64,16 +65,16 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 	 */
 
 	@Test
+	@Order(30)
 	public void deleteTaskAnotherManager() {
+		this.resetDataBase();
+		//Accedemos al listado de task del manager
 
 		super.signIn("manager1", "manager1");
-
-		//Accedemos al listado de task del manager
-		this.driver.get("http://localhost:8090/Acme-Planner/manager/task/list");
+		super.clickOnMenu("Manager", "List tasks");
 		this.setAutoPausing(true);
 		//hacemos click en la 1 tarea del listado
-		super.clickAndGo(By.xpath("//*[@id=\"list\"]/tbody/tr[1]/td[4]"));
-
+		super.clickOnListingRecord(0);
 		//Obtenemos la url de la tarea 
 		final String urlTask = super.driver.getCurrentUrl();
 
@@ -100,12 +101,13 @@ public class ManagerRemoveTaskTest extends AcmePlannerTest {
 	 */
 
 	@Test
+	@Order(20)
 	public void deleteTaskNegative() {
 
 		super.navigateHome();
 
 		//Accedemos a una task cualquiera del manager
-		super.driver.get("http://localhost:8090/Acme-Planner/manager/task/show?id=34");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/manager/task/show?id=34");
 
 		//Comprobamos que no hay acceso, por lo que no podemos borrarla
 		this.checkPanicExists();

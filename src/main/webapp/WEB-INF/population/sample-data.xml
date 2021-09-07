@@ -377,7 +377,7 @@
 		<property name="title" value="Example task 8" />
 		<property name="startDate" value="2021/02/01 00:00" />
 		<property name="endDate" value="2021/02/23 00:00" />
-		<property name="workload" value="15.0" />
+		<property name="workload" value="11.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"
@@ -391,16 +391,16 @@
 	
 	<bean id="task09" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 9" />
-		<property name="startDate" value="2021/01/01 00:00" />
-		<property name="endDate" value="2021/02/22 00:00" />
-		<property name="workload" value="10.0" />
+		<property name="startDate" value="2021/02/04 00:00" />
+		<property name="endDate" value="2021/02/23 00:00" />
+		<property name="workload" value="9.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="false" />
-		<property name="executionPeriod" value="1176" />
+		<property name="executionPeriod" value="456.00" />
 		<property name="manager" ref="manager1Manager"/>
 		
 	</bean>
@@ -409,7 +409,7 @@
 		<property name="title" value="Example task 10" />
 		<property name="startDate" value="2021/04/04 00:00" />
 		<property name="endDate" value="2021/04/12 00:00" />
-		<property name="workload" value="15.0" />
+		<property name="workload" value="12.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"
@@ -425,7 +425,7 @@
 		<property name="title" value="Example task 11" />
 		<property name="startDate" value="2021/04/08 00:00" />
 		<property name="endDate" value="2021/04/12 00:00" />
-		<property name="workload" value="15.0" />
+		<property name="workload" value="13.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"
@@ -441,7 +441,7 @@
 		<property name="title" value="Example task 12" />
 		<property name="startDate" value="2021/01/01 00:00" />
 		<property name="endDate" value="2021/01/11 00:00" />
-		<property name="workload" value="19.0" />
+		<property name="workload" value="16.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"
@@ -456,7 +456,7 @@
 		<property name="title" value="Example task 13" />
 		<property name="startDate" value="2020/10/20 00:00" />
 		<property name="endDate" value="2020/10/25 00:00" />
-		<property name="workload" value="19.0" />
+		<property name="workload" value="17.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"
@@ -471,7 +471,7 @@
 		<property name="title" value="Example task 14" />
 		<property name="startDate" value="2021/03/01 00:00" />
 		<property name="endDate" value="2021/03/11 00:00" />
-		<property name="workload" value="19.0" />
+		<property name="workload" value="18.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"

@@ -89,11 +89,11 @@ public class AdministratorUpdateThresholdTest extends AcmePlannerTest {
 		super.navigateHome();
 		super.signIn("manager1", "manager1");
 
-		super.driver.get("http://localhost:8090/Acme-Planner/administrator/spam/update");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/administrator/spam/update");
 		this.checkPanicExists();
 		this.signOut();
 		this.navigateHome();
-		super.driver.get("http://localhost:8090/Acme-Planner/administrator/spam/update");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/administrator/spam/update");
 		this.checkPanicExists();
 		
 	}

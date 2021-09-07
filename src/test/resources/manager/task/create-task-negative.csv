@@ -1,7 +1,14 @@
-recordIndex,description,end_date,optional_link,start_date,title,visibility,workload
-0,,2021/07/23 23:00,http://www.sample-app.com,2021/07/01 23:00,Example task 16,PUBLIC,1.2
-1,This is the oldest announcement in the system.,,http://www.sample-app.com,2021/08/01 22:00,Example task 17,PUBLIC,3.0
-2,This is the oldest announcement in the system.,2021/09/23 23:00,sample-app,2021/09/01 23:00,Example task 18,PUBLIC,20.0
-3,This is the oldest announcement in the system.,2021/09/21 23:00,http://www.sample-app.com,,Example task 19,PUBLIC,5.0
-4,This is the oldest announcement in the system.,2021/10/21 23:00,http://www.sample-app.com,2021/10/01 23:00,,PUBLIC,10.0
-5,This is the oldest announcement in the system.,2021/10/21 23:00,http://www.sample-app.com,2021/10/01 23:00,Example task 20,PUBLIC,
+recordIndex,description,end_date,optional_link,start_date,title,visibility,workload,finished
+0,,2021/07/23 23:00,http://www.sample-app.com,2021/07/01 23:00,Example task 16,PUBLIC,1.2,Finished
+1,This is the oldest announcement in the system.,,http://www.sample-app.com,2021/08/01 22:00,Example task 17,PUBLIC,3.0,Not finished
+2,This is the oldest announcement in the system.,2021/10/23 23:00,http://www.sample-app.com,2021/10/23 21:00,Example task 18,PUBLIC,99.10,Not finished
+3,This is the oldest announcement in the system.,2021/10/23 23:00,http://www.sample-app.com,2021/10/23 21:00,Example task 18,PUBLIC,100.10,Finished
+4,This is the oldest announcement in the system.,2021/10/21 23:00,http://www.sample-app.com,2021/10/01 23:00,Example task 20,PUBLIC,25.80,Finished
+5,This is the oldest announcement in the system.,2021/10/23 23:30,http://www.sample-app.com,2021/10/24 22:00,Example task 17,PUBLIC,1.30,Not finished
+6,This is the oldest announcement in the system.,2021/10/01 23:30,http://www.sample-app.com,2021/10/01 23:00,Example task 20,PUBLIC,2.00,Finished
+7,This is the oldest announcement in the system.,2020/10/23 12:00,http://www.sample-app.com,2020/10/23 10:00,Example task 16,PUBLIC,2.70,Finished
+8,This is a text with +500 characters aaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,2021/10/23 23:00,http://www.sample-app.com,2021/10/23 21:00,Example task 18,PUBLIC,2.10,Finished
+9,This is the oldest announcement in the system.,2021/09/23 23:00,sample-app,2021/09/01 23:00,Example task 18,PUBLIC,20.0,Not finished
+10,This is the oldest announcement in the system.,2021/09/21 23:00,http://www.sample-app.com,,Example task 19,PUBLIC,5.0,Not finished
+11,This is the oldest announcement in the system.,2021/10/21 23:00,http://www.sample-app.com,2021/10/01 23:00,,PUBLIC,10.0,Not finished
+12,This is the oldest announcement in the system.,2021/10/21 23:00,http://www.sample-app.com,2021/10/01 23:00,Example task 20,PUBLIC,1.80,Finished

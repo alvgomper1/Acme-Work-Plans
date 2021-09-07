@@ -55,7 +55,7 @@ public class AdministratorUpdateUserTest extends AcmePlannerTest {
 	public void negativeUpdate() {
 
 	
- 		super.driver.get("http://localhost:8090/Acme-Planner/administrator/user-account/show?id=7");
+ 		super.driver.get("http://localhost:8090/Acme-Work-Plans/administrator/user-account/show?id=7");
 	 	this.checkPanicExists();
 	
 
