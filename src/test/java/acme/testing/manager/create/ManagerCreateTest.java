@@ -68,7 +68,7 @@ public class ManagerCreateTest extends AcmePlannerTest {
 		super.signIn(username, password);
 		assert super.exists(By.linkText("Manager"));
 		assert !super.exists(By.linkText("Become a manager"));
-		super.driver.get("http://localhost:8090/Acme-Planner/authenticated/manager/create");
+		super.driver.get("http://localhost:8090/Acme-Work-Plans/authenticated/manager/create");
 		this.checkPanicExists();
 		this.signOut();
 

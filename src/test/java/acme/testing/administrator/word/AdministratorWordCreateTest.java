@@ -84,7 +84,7 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 	@Order(30)
 	public void AnonymousTriesToCreateWords() {
 
- 		super.driver.get("http://localhost:8090/Acme-Planner/administrator/word/create");
+ 		super.driver.get("http://localhost:8090/Acme-Work-Plans/administrator/word/create");
 		super.checkPanicExists();
 		
 
@@ -97,7 +97,7 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 	@Order(40)
 	public void ManagerTriesToCreateWords() {
 		super.signIn("manager1", "manager1");
- 		super.driver.get("http://localhost:8090/Acme-Planner/administrator/word/create");
+ 		super.driver.get("http://localhost:8090/Acme-Work-Plans/administrator/word/create");
 		super.checkPanicExists();
 		super.signOut();
 	

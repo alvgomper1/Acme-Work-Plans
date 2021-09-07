@@ -63,7 +63,7 @@ public class AdministratorUserAccountListTest extends AcmePlannerTest {
 	public void listUserAccountsNegative() {
 
 	
- 		super.driver.get("http://localhost:8090/Acme-Planner/administrator/user-account/list");
+ 		super.driver.get("http://localhost:8090/Acme-Work-Plans/administrator/user-account/list");
 	 	this.checkPanicExists();
 	
 
