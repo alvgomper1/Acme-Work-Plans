@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
 
-public class AuthenticatedListPublicFinishedTaskTest extends AcmePlannerTest{
+public class AuthenticatedShowPublicFinishedTaskTest extends AcmePlannerTest{
 
 	
 	/**
