@@ -6,9 +6,9 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 import org.springframework.core.annotation.Order;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class ManagerUpdateTaskTests extends AcmePlannerTest {
+public class ManagerUpdateTaskTests extends AcmeWorkPlansTest {
 
 	//Test cases------------------------------------------
 

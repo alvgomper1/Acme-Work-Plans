@@ -4,7 +4,7 @@ import org.hibernate.internal.util.StringHelper;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebElement;
 
-public abstract class AcmePlannerTest extends AcmeTest {
+public abstract class AcmeWorkPlansTest extends AcmeTest {
 
 	// Internal state ---------------------------------------------------------
 

@@ -10,9 +10,9 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
 import acme.components.UtilComponent;
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class AnonymousShoutListTest extends AcmePlannerTest {
+public class AnonymousShoutListTest extends AcmeWorkPlansTest {
 
 	
 

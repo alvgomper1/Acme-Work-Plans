@@ -7,7 +7,7 @@ purposes.  The copyright owner does not offer any warranties or representations,
 they accept any liabilities with respect to them.
 
 
-Este es el proyecto Acme-Planner D2, correspondiente a los alumnos del grupo 30 de DP2 de 
+Este es el proyecto Acme-Work-Plans D3, correspondiente a los alumnos del grupo 30 de DP2 de 
 Ingeniería Informática del Software de la Universidad de Sevilla. Para este proyecto había 
 que trabajar con un framework especial proporcionado por los profesores de la asignatura.
 
@@ -17,7 +17,7 @@ GitHub Repository: https://github.com/felconmar/Acme-Work-Plans.git
 
 -NOS PRESENTAMOS AL NIVEL B
 
---ANTES DE EJECUTAR LOS TESTS ES NECESARIO: -Configurar el launcher de Acme-Planner (Test) en tu Eclipse para que ejecute todos los tests en el directorio src/test/java: - Click derecho en la carpeta del proyecto en Eclipse ---> Propiedades ---> Run/Debug settings --> Seleccionas Acme-Planner(Test) y le das a editar --> ---> Dentro de "Run all tests in the selected projects package or source folder..." ponemos el directorio "src/test/java"
+--ANTES DE EJECUTAR LOS TESTS ES NECESARIO: -Configurar el launcher de Acme-Work-Plans (Test) en tu Eclipse para que ejecute todos los tests en el directorio src/test/java: - Click derecho en la carpeta del proyecto en Eclipse ---> Propiedades ---> Run/Debug settings --> Seleccionas Acme-Work-Plans(Test) y le das a editar --> ---> Dentro de "Run all tests in the selected projects package or source folder..." ponemos el directorio "src/test/java"
 
 -UNA VEZ TERMINEN LOS TESTS DE EJECUTARSE,PARA QUE APAREZCA BIEN EL COVERAGE DE LOS TESTS ES NECESARIO REALIZAR LO SIGUIENTE:
 

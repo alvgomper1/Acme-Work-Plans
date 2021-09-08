@@ -7,9 +7,9 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 
 import acme.components.UtilComponent;
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class ManagerListTaskTest extends AcmePlannerTest {
+public class ManagerListTaskTest extends AcmeWorkPlansTest {
 	
 	/**
 	 * La feature que prueba este test es la de listar tareas siendo un usuario manager

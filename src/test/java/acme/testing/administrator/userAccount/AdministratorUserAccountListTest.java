@@ -17,9 +17,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class AdministratorUserAccountListTest extends AcmePlannerTest {
+public class AdministratorUserAccountListTest extends AcmeWorkPlansTest {
 
 	/**
 	 * En este test se prueba el caso positivo de listar los userAccounts desde el rol de Administrator haciendonos uso de un csv que contiene los datos correctos de dicha lista.
