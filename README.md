@@ -16,6 +16,17 @@ GitHub Repository: https://github.com/felconmar/Acme-Work-Plans.git
 - EL PUERTO  ES EL 8090 por diversos conflictos
 
 -NOS PRESENTAMOS AL NIVEL B
+
+--ANTES DE EJECUTAR LOS TESTS ES NECESARIO: -Configurar el launcher de Acme-Planner (Test) en tu Eclipse para que ejecute todos los tests en el directorio src/test/java: - Click derecho en la carpeta del proyecto en Eclipse ---> Propiedades ---> Run/Debug settings --> Seleccionas Acme-Planner(Test) y le das a editar --> ---> Dentro de "Run all tests in the selected projects package or source folder..." ponemos el directorio "src/test/java"
+
+-UNA VEZ TERMINEN LOS TESTS DE EJECUTARSE,PARA QUE APAREZCA BIEN EL COVERAGE DE LOS TESTS ES NECESARIO REALIZAR LO SIGUIENTE:
+
+-Iniciar sesión como adminsitrador (user=administrator pass=administrator)
+
+-Ir al menú del administrador y pulsar "Shut Down"
+
+-Tras realizar esto, el coverage debe aparecer correctamente en Eclipse. Superamos el 60% de cobertura en todas las features
+
 - Hemos partido del proyecto desarrollado durante el curso, cambiando algunos detalles de los nuevos requisitos, así como el nombre a "Acme-Work-Plans" (junto con los launchers de la base de datos). El compañero "Manuel García Marchena" aprobó la asignatura en la convocatoria de Junio, pero lo seguimos mencionando en los diferentes reportes del entregable, puesto que fue, junto con nosotros, autor del proyecto.
 
 - IMPORTANTE LEER NUESTRA INTERPRETACIÓN DEL MÓDULO DE SPAM (Apartado 2 del reporte "Features Model").
