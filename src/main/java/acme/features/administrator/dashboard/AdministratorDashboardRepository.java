@@ -43,15 +43,15 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	Double maxTaskWorkload();
 	
 	@Query("select avg(t.executionPeriod) from Task t")
-	Long averageTaskExecutionPeriod();
+	Double averageTaskExecutionPeriod();
 	
 	@Query("select stddev(t.executionPeriod) from Task t")
-	Long deviationTaskExecutionPeriod();
+	Double deviationTaskExecutionPeriod();
 	
 	@Query("select min(t.executionPeriod) from Task t")
-	Long minTaskExecutionPeriod();
+	Double minTaskExecutionPeriod();
 	
 	@Query("select max(t.executionPeriod) from Task t")
-	Long maxTaskExecutionPeriod();
+	Double maxTaskExecutionPeriod();
 
 }

@@ -1,4 +1,4 @@
 recordIndex,numberPublicTasks,numberPrivateTasks,numberFinishedTasks,numberNonFinishedTasks,averageTaskExecPeriod,deviationTaskExecPeriod,maxTaskExecPeriod,minTaskExecPeriod,averageTaskWorkload,deviationTaskWorkload,maxTaskWorkload,minTaskWorkload,description,end_date,optional_link,start_date,title,visibility,workload
-0,13,3,6,10,229,162,528,2,10.09,6.56,20.00,0.20,This is the oldest announcement in the system.,2021/10/08 03:57,http://www.sample-app.com,2021/10/08 01:57,Example task 16,PUBLIC,1.0
-0,13,4,6,11,216,166,528,2,9.50,6.79,20.00,0.10,This is the oldest announcement in the system.,2021/10/08 03:58,http://www.sample-app.com,2021/10/08 01:58,Example task 16,PRIVATE,0.1
-0,14,4,6,12,205,167,528,2,10.14,7.10,21.00,0.10,This is the oldest announcement in the system.,2021/10/09 04:01,http://www.sample-app.com,2021/10/08 02:01,Example task 16,PUBLIC,21.00
+0,13,3,6,10,229.62,162.37,528.00,2.00,10.09,6.56,20.00,0.20,This is the oldest announcement in the system.,2021/10/08 03:57,http://www.sample-app.com,2021/10/08 01:57,Example task 16,PUBLIC,1.0
+0,13,4,6,11,216.24,166.38,528.00,2.00,9.50,6.79,20.00,0.10,This is the oldest announcement in the system.,2021/10/08 03:58,http://www.sample-app.com,2021/10/08 01:58,Example task 16,PRIVATE,0.1
+0,14,4,6,12,205.67,167.46,528.00,2.00,10.14,7.10,21.00,0.10,This is the oldest announcement in the system.,2021/10/09 04:01,http://www.sample-app.com,2021/10/08 02:01,Example task 16,PUBLIC,21.00

@@ -62,10 +62,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		final Integer totalNumberOfFinishedTasks;
 		final Integer totalNumberOfNonFinishedTasks;
 		
-		final Long averageTaskExecutionPeriod;
-		final Long deviationTaskExecutionPeriod;
-		final Long minTaskExecutionPeriod;
-		final Long maxTaskExecutionPeriod;
+		final Double averageTaskExecutionPeriod;
+		final Double deviationTaskExecutionPeriod;
+		final Double minTaskExecutionPeriod;
+		final Double maxTaskExecutionPeriod;
 		
 		final Double averageTaskWorkload;
 		final Double deviationTaskWorkload;

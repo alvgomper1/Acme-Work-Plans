@@ -32,10 +32,10 @@ public class Dashboard implements Serializable {
 	Integer						totalNumberOfFinishedTasks;
 	Integer						totalNumberOfNonFinishedTasks;
 	
-	Long 						averageTaskExecutionPeriod;
-	Long 						deviationTaskExecutionPeriod;
-	Long 						minTaskExecutionPeriod;
-	Long 						maxTaskExecutionPeriod;
+	Double 						averageTaskExecutionPeriod;
+	Double 						deviationTaskExecutionPeriod;
+	Double 						minTaskExecutionPeriod;
+	Double 						maxTaskExecutionPeriod;
 	
 	Double 						averageTaskWorkload;
 	Double 						deviationTaskWorkload;
