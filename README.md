@@ -33,7 +33,7 @@ GitHub Repository: https://github.com/felconmar/Acme-Work-Plans.git
 - El atributo "workload" tiene el significado "horas.minutos". Es decir, 1.5 representa "1 hora y 50 minutos".
 - Para satisfacer el requisito de "executionPeriod", hemos creado 2 fechas, una de inicio y otra de fin para las Tasks. No obstante, hemos creado además un nuevo atributo "executionPeriod" que indica la duración en horas entre la fecha de inicio y el fin de la tarea (En este caso, 1.5= 1 hora y 30 minutos) Se usará para saber si un workload entra dentro de la duración de una task. 
 
-Url del proyecto en CleverCloud: https://app-97baeb30-90ef-49e6-8e97-1a2ceb8d961f.cleverapps.io/Acme-Work-Plans
+Url del proyecto en CleverCloud: http://app_8a279057-5f09-4846-9e5d-f0687595e43d.cleverapps.io/Acme-Work-Plans
 PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Work-Plans/"
 
 
